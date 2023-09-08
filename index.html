@@ -2,6 +2,13 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
+        <script>
+            var messages = [
+                "human, <em>allegedly</em>",
+                "the <em>other</em> message",
+                "the \"other\" white meat"
+            ];
+        </script>
     </head>
 
     <body>
@@ -24,7 +31,13 @@
 
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div class="subheader">human, <em>allegedly</em></div>
+                <div id="subheader" class="subheader">
+                    <script>
+                        var el = document.getElementById("subheader");
+                        var choice = Math.floor(Math.random() * messages.length);
+                        el.innerHTML = messages[choice];
+                    </script>
+                </div>
 
                 <div class="body-content">
                     <div class="page-header">Updates</div>
