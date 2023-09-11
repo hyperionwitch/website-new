@@ -45,8 +45,8 @@
                 <div class="body-content">
                     <div class="page-header">Illustrations</div>
                     <div class="illustration-masonry">
-                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-holidays2022.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-inspiration.jpg')" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/nierauto-renaissance.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/p4-truth.jpg" width="200px" alt=""/></div>
@@ -56,7 +56,7 @@
                         <div><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/witcher-tossacoin.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-hearthfire.jpg')" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/ff14-uldahnmarket.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-lastseed.jpg" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-firstseed.jpg" width="200px" alt=""/></div>
@@ -100,6 +100,33 @@
             </div>
         
         
+        </div>
+
+        <script>
+            function spawnModal(source) {
+                var image = document.getElementById("illustration-modal-image");
+                image.src = source;
+                var modal = document.getElementById("illustration-modal");
+                modal.style.display = "block";
+            }
+            function closeModal() {
+                var modal = document.getElementById("illustration-modal");
+                modal.style.display = "none";
+            }
+        </script>
+
+        <div style="display: none;" id="illustration-modal" class="illustration-modal"  onclick="closeModal()">
+            <div class="illustration-modal-inner">
+                <img src="" alt="" id="illustration-modal-image" class="illustration-modal-image">
+                <script>
+                    function preventClickThrough(e) {
+                        e.stopImmediatePropagation();
+                    }
+                    var image = document.getElementById("illustration-modal-image");
+                    image.addEventListener("click", preventClickThrough);
+                </script>
+                <div onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+            </div>
         </div>
 
 
