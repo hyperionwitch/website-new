@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
-        <script>
+        <script> // variables for subheader text
             var messages = [
                 "human, <em>allegedly</em>",
-                "the <em>other</em> message",
-                "the \"other\" white meat"
+                "the \"other\" white meat",
+                "the rattling is getting closer"
             ];
         </script>
     </head>
@@ -15,6 +16,8 @@
 
 
         <div class="content-container">
+            
+            
             <div class="nav-container">
                 <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
                 <div class="nav-links">
@@ -32,7 +35,7 @@
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
                 <div id="subheader" class="subheader">
-                    <script>
+                    <script> //randomizes subheader text
                         var el = document.getElementById("subheader");
                         var choice = Math.floor(Math.random() * messages.length);
                         el.innerHTML = messages[choice];
@@ -42,9 +45,18 @@
                 <div class="body-content">
                     <div class="page-header">Updates</div>
                     <div class="page-subheader">goings-on around the website</div>
-                    <div class="page-text">Finally putting my money where my mouth is re: going back to the good ol' internet days, and now I have a website.  Half portfolio, half personal site, feel free to browse while I get things in order.</div>
+                    <div class="page-text">
+                        <div class="updates">
+                            <div class="update-block">
+                                <div class="update-date">September 8th, 2023</div>
+                                <div class="update-text">Finally putting my money where my mouth is re: going back to the good ol' internet days, and now I have a website.  Half portfolio, half personal site, feel free to browse while I get things in order.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        
+        
         </div>
 
 

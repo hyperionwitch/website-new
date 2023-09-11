@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
+        <script> // variables for subheader text
+            var messages = [
+                "human, <em>allegedly</em>",
+                "the \"other\" white meat",
+                "the rattling is getting closer"
+            ];
+        </script>
     </head>
 
     <body>
         
 
         <div class="content-container">
+            
+            
             <div class="nav-container">
                 <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
                 <div class="nav-links">
@@ -24,7 +34,13 @@
 
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div class="subheader">human, <em>allegedly</em></div>
+                <div id="subheader" class="subheader">
+                    <script> //randomizes subheader text
+                        var el = document.getElementById("subheader");
+                        var choice = Math.floor(Math.random() * messages.length);
+                        el.innerHTML = messages[choice];
+                    </script>
+                </div>
 
                 <div class="body-content">
                     <div class="page-header">Tev and Dren</div>
@@ -38,176 +54,178 @@
                     </div>
                     <div class="tevdren-comics">
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-arrival.jpg" alt="" />
                             <span>arrival in vvardenfell</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-firstmeeting.jpg" alt="" />
                             <span>the first meeting</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-firstrobbery.jpg" alt="" />
                             <span>first robbery foiled</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-gettingintheway.jpg" alt="" />
                             <span>getting in the way</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-rockystart.jpg" alt="" />
                             <span>a rocky start</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-severalweeks.jpg" alt="" />
                             <span>several weeks in</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-pressingforanswers.jpg" alt="" />
                             <span>pressing for answers</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-heartfeltconversation.jpg" alt="" />
                             <span>a heartfelt conversation</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-journeybegins.jpg" alt="" />
                             <span>the journey begins</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-arkngthand1.jpg" alt="" />
                             <span>arkngthand, pt. I</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-arkngthand2.jpg" alt="" />
                             <span>arkngthand, pt. II</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-afterarkngthand.jpg" alt="" />
                             <span>after arkngthand</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-firstdream.jpg" alt="" />
                             <span>the first dream</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-roadtoandranotomb.jpg" alt="" />
                             <span>on the road to<br/>andrano tomb</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-nicknames.jpg" alt="" />
                             <span>nicknames</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-seconddream.jpg" alt="" />
                             <span>the second dream</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-vivecinformants.jpg" alt="" />
                             <span>after meeting the<br/>vivec informants</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-thirddream.jpg" alt="" />
                             <span>the third dream</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-backfromvivec1.jpg" alt="" />
                             <span>back from vivec</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-backfromvivec2.jpg" alt="" />
                             <span>later that night</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-homeownership.jpg" alt="" />
                             <span>homeownership</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-latenightvisit.jpg" alt="" />
                             <span>late night visit</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-sleepersawake.jpg" alt="" />
                             <span>sleepers awake</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-fourthdream.jpg" alt="" />
                             <span>the fourth dream</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-nerevarinenews.jpg" alt="" />
                             <span>nerevarine news</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-apologyandagift.jpg" alt="" />
                             <span>apology and a gift</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-bondingwiththeurshilaku.jpg" alt="" />
                             <span>bonding time in the<br/>urshilaku camp</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-firstwisewomanwrapup.jpg" alt="" />
                             <span>after first meeting<br/>with nibani maesa</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-headingtoilunibi.jpg" alt="" />
                             <span>heading to ilunibi</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-ilunibi.jpg" alt="" />
                             <span>ilunibi</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-gares.jpg" alt="" />
                             <span>battle with<br/>dagoth gares</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-postgares.jpg" alt="" />
                             <span>dagoth gares aftermath</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-corprusdrama1.jpg" alt="" />
                             <span>corprus drama, pt. I</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-corprusdrama2.jpg" alt="" />
                             <span>corprus drama, pt. II</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-nerevarinechoice.jpg" alt="" />
                             <span>nerevarine choice</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-love.jpg" alt="" />
                             <span>midnight conversations</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-downtimeinbalmora.jpg" alt="" />
                             <span>downtime in balmora</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-confessionatghostgate.jpg" alt="" />
                             <span>confession before the<br/>final battle</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-harddecision.jpg" alt="" />
                             <span>a hard decision</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur1.jpg" alt="" />
                             <span>battle with dagoth ur,<br/>pt. I</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur2.jpg" alt="" />
                             <span>battle with dagoth ur,<br/>pt. II</span>
                         </div>
                         <div class="tevdren-comiclink">
-                            <img src="" alt="" />
+                            <img src="./images/comics-thumbs/tevdren-afterthebattle.jpg" alt="" />
                             <span>after the battle</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 

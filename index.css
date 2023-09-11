@@ -179,16 +179,37 @@ body {
 
 
 
-.illustration-masonry {
-    columns: 5 200px;
-    column-gap: 1rem;
+.updates {
     margin-bottom: 100px;
+}
+.update-block {
+    background-color: var(--bg-color3);
+    max-width: 1000px;
+    padding: 20px;
+    margin: 10px 0px;
+}
+.update-date {
+    font-family: var(--subheader-font);
+    color: var(--text-color2);
+    font-size: 19pt;
+    padding-bottom: 20px;
+}
+.update-text {
+    padding-bottom: 10px;
+}
+
+
+
+.illustration-masonry {
+    columns: 5 150px;
+    column-gap: 1rem;
+    margin: 10px 20px 100px;
   }
 .illustration-masonry div {
     width: 150px;
     background: #00000000;
     color: white;
-    margin: 0 1rem 1rem 0;
+    margin: 0 20px 10px 0;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -224,7 +245,7 @@ body {
     background-color: var(--bg-color2);
     width: 150px;
     height: 150px;
-    padding: 20px;
+    margin: 10px;
     display: block;
 }
 .tevdren-comiclink span {

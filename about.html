@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
+        <script> // variables for subheader text
+            var messages = [
+                "human, <em>allegedly</em>",
+                "the \"other\" white meat",
+                "the rattling is getting closer"
+            ];
+        </script>
     </head>
 
     <body>
 
 
         <div class="content-container">
+            
+            
             <div class="nav-container">
                 <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
                 <div class="nav-links">
@@ -24,7 +34,13 @@
 
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div class="subheader">human, <em>allegedly</em></div>
+                <div id="subheader" class="subheader">
+                    <script> //randomizes subheader text
+                        var el = document.getElementById("subheader");
+                        var choice = Math.floor(Math.random() * messages.length);
+                        el.innerHTML = messages[choice];
+                    </script>
+                </div>
 
                 <div class="body-content">
                     <div class="page-header">About the Artist</div>
@@ -32,6 +48,8 @@
                     <div class="page-text">Gillian Renk is a shambling pile of goth dust and bird bones (read: artist) with a passion for historic art styles, digital painting, and comics. With a focus on fanart of video games and other media, she also dabbles in cosplay, photography, and web design. She finds the distance of third person description to be a comforting barrier to writing about herself, which is otherwise a completely miserable task for the Average Bisexual Millenial with imposter syndrome.</div>
                 </div>
             </div>
+        
+        
         </div>
 
 

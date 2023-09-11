@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
+        <script> // variables for subheader text
+            var messages = [
+                "human, <em>allegedly</em>",
+                "the \"other\" white meat",
+                "the rattling is getting closer"
+            ];
+        </script>
     </head>
 
     <body>
 
 
         <div class="content-container">
+            
+            
             <div class="nav-container">
                 <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
                 <div class="nav-links">
@@ -24,28 +34,72 @@
 
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div class="subheader">human, <em>allegedly</em></div>
+                <div id="subheader" class="subheader">
+                    <script> //randomizes subheader text
+                        var el = document.getElementById("subheader");
+                        var choice = Math.floor(Math.random() * messages.length);
+                        el.innerHTML = messages[choice];
+                    </script>
+                </div>
 
                 <div class="body-content">
+                    <div class="page-header">Illustrations</div>
                     <div class="illustration-masonry">
-                        <div><img src="./test-images/nier-renaissance-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/darksouls-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/silenthill2-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/persona4-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/solris-deception-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/ff15-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/ff7-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/xenosaga-kosmos-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/yunaaeons-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/turks-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/ootmm-print-FIN-halfinch-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/undertalepacifist-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/undertalegenocide-print-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/vicaitlyn-print-FIN-small.png" width="200px" alt=""/></div>
-                        <div><img src="./test-images/korrasami-print-FIN-small.png" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/nierauto-renaissance.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/p4-truth.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ds-fourlords.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/sh2-reversible.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-frostfall.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/witcher-tossacoin.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ff14-uldahnmarket.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-lastseed.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-firstseed.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-lavellanskyfall.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-morningstar.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-gares.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/pf-fashionablemops.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/pf-storminabottle.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/xs-kosmos.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-rainy.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-commission.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-solavellan.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ut-genocide.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ut-pacifist.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ff7-cloudseph.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/es5-nelanis.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/su-sailorquartz.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/lok-korrasami.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-firelight.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-watchitburn.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-nehristarot.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/dai-nehris.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/pf-darktapestry.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/mh-whatyouhavecaused.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/mh-afraidtosee.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/mh-everythingisfine.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ff7-turks.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/ff10-yunaaeons.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/lol-vicait.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/loz-ootmm.jpg" width="200px" alt=""/></div>
                     </div>
                 </div>
             </div>
+        
+        
         </div>
 
 

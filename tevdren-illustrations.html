@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
+        <script> // variables for subheader text
+            var messages = [
+                "human, <em>allegedly</em>",
+                "the \"other\" white meat",
+                "the rattling is getting closer"
+            ];
+        </script>
     </head>
 
     <body>
         
 
         <div class="content-container">
+            
+            
             <div class="nav-container">
                 <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
                 <div class="nav-links">
@@ -24,16 +34,44 @@
 
             <div class="body-container">
                 <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div class="subheader">human, <em>allegedly</em>
+                <div id="subheader" class="subheader">
+                    <script> //randomizes subheader text
+                        var el = document.getElementById("subheader");
+                        var choice = Math.floor(Math.random() * messages.length);
+                        el.innerHTML = messages[choice];
+                    </script>
                     <div class="back-button"><a class="link" href="./comics.html">&lt; back to comics</a></div>
                 </div>
 
                 <div class="body-content">
                     <div class="page-header">Tev and Dren</div>
                     <div class="page-subheader">misc. illustrations and sketches</div>
-                    <div class="page-text">WIP</div>
+                    <div class="illustration-masonry">
+                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-frostfall.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-lastseed.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-firstseed.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-morningstar.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-gares.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-rainy.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" width="200px" alt=""/></div>
+                    </div>
                 </div>
             </div>
+
+
         </div>
 
 
