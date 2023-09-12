@@ -40,38 +40,66 @@
                         var choice = Math.floor(Math.random() * messages.length);
                         el.innerHTML = messages[choice];
                     </script>
-                    <div class="back-button"><a class="link" href="./comics.html">&lt; back to comics</a></div>
+                    <div class="back-button"><a href="./comics.html">&lt; back to comics</a></div>
                 </div>
 
                 <div class="body-content">
                     <div class="page-header">Tev and Dren</div>
                     <div class="page-subheader">misc. illustrations and sketches</div>
                     <div class="illustration-masonry">
-                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-frostfall.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-lastseed.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-firstseed.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-morningstar.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-gares.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-rainy.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" width="200px" alt=""/></div>
-                        <div><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-holidays2022.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-inspiration.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-yearning.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-frostfall.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-frostfall.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-sunsheight.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-almostlostyou.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-hearthfire.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-lastseed.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-lastseed.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-firstseed.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-firstseed.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-musiclessons.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-sunsdawn.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-morningstar.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-tevdren-morningstar.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-eveningstar.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-gares.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-gares.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-drenpinup.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-tevpinup.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-rainy.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-rainy.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-momentofcalm.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-kintsukuroi.jpg')" width="200px" alt=""/></div>
+                        <div><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-weaveoffate.jpg')" width="200px" alt=""/></div>
                     </div>
                 </div>
             </div>
 
 
+        </div>
+
+
+        <script>
+            function spawnModal(source) {
+                var image = document.getElementById("illustration-modal-image");
+                image.src = source;
+                var modal = document.getElementById("illustration-modal");
+                modal.style.display = "block";
+            }
+            function closeModal() {
+                var modal = document.getElementById("illustration-modal");
+                modal.style.display = "none";
+            }
+        </script>
+
+        <div style="display: none;" id="illustration-modal" class="illustration-modal"  onclick="closeModal()">
+            <div class="illustration-modal-inner">
+                <img src="" alt="" id="illustration-modal-image" class="illustration-modal-image">
+                <script>
+                    function preventClickThrough(e) {
+                        e.stopImmediatePropagation();
+                    }
+                    var image = document.getElementById("illustration-modal-image");
+                    image.addEventListener("click", preventClickThrough);
+                </script>
+                <div onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+            </div>
         </div>
 
 
