@@ -3,8 +3,8 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
-        <script> // variables for subheader text
-            var messages = [
+        <script> 
+            var messages = [ // variables for subheader text
                 "human, <em>allegedly</em>",
                 "the \"other\" white meat",
                 "the rattling is getting closer"
@@ -44,7 +44,8 @@
 
                 <div class="body-content">
                     <div class="page-header">Illustrations</div>
-                    <div class="illustration-masonry">
+                    <div id="illustration-loading" class="loading" style="display: block;">loading...</div>
+                    <div id="illustration-masonry" class="illustration-masonry" style="opacity: 0;">
                         <div><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-holidays2022.jpg')" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-inspiration.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-inspiration.jpg')" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/tevdren-yearning.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-yearning.jpg')" width="200px" alt=""/></div>
@@ -96,6 +97,22 @@
                         <div><img src="./images/illo-thumbs/lol-vicait.jpg" onclick="spawnModal('./images/illo-fullres/lol-vicait.jpg')" width="200px" alt=""/></div>
                         <div><img src="./images/illo-thumbs/loz-ootmm.jpg"onclick="spawnModal('./images/illo-fullres/loz-ootmm.jpg')"  width="200px" alt=""/></div>
                     </div>
+
+                    <script>
+                        function showIllustrations() {
+                            var illustrations = document.getElementById("illustration-masonry");
+                            illustrations.style.opacity = "1";
+                        }
+
+                        window.setTimeout(showIllustrations, 1000);
+
+                        function hideLoading() {
+                            var loading = document.getElementById("illustration-loading");
+                            loading.style.display = "none";
+                        }
+
+                        window.setTimeout(hideLoading, 990)
+                    </script>
                 </div>
             </div>
         

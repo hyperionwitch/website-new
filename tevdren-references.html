@@ -3,12 +3,333 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
-        <script> // variables for subheader text
-            var messages = [
+        <script> 
+            var messages = [ // variables for subheader text
                 "human, <em>allegedly</em>",
                 "the \"other\" white meat",
                 "the rattling is getting closer"
             ];
+            var carousels = { // variables for carousels
+                "tevscars": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-base-early.jpg" alt=""/>
+                                <div class="carousel-caption">original, pre-Ilunibi</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-base-ilunibi.jpg" alt=""/>
+                                <div class="carousel-caption">post-Ilunibi, pre-Dagoth Ur</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-base-tribunal.jpg" alt=""/>
+                                <div class="carousel-caption">post-Dagoth Ur</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "tevunderwear": `<div class="carousel-slide">
+                                <div class="carousel-number">1/1</div>
+                                <img src="./images/tevdren-refs-fullres/tev-underwear.jpg" alt=""/>
+                                <div class="carousel-caption">Undergarments and loose hair (shown pre-Ilunibi)</div>
+                            </div>`,
+                "tevmsq": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq1.jpg" alt=""/>
+                                <div class="carousel-caption">Slip and pants (shown pre-Ilunibi)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq2.jpg" alt=""/>
+                                <div class="carousel-caption">Underdress, inner wrap, and embroidered sash</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq3.jpg" alt=""/>
+                                <div class="carousel-caption">Overdress</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq4.jpg" alt=""/>
+                                <div class="carousel-caption">Belt and chestwrap</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq5.jpg" alt=""/>
+                                <div class="carousel-caption">Shoes, gloves, and necklaces</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">6/6</div>
+                                <img src="./images/tevdren-refs-fullres/tev-msq6.jpg" alt=""/>
+                                <div class="carousel-caption">Gifted coat, scarf, and shoe wraps</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "tevcasual1": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/4</div>
+                                <img src="./images/tevdren-refs-fullres/tev-relaxed1.jpg" alt=""/>
+                                <div class="carousel-caption">Slip and pants (shown post-Dagoth Ur)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/4</div>
+                                <img src="./images/tevdren-refs-fullres/tev-relaxed2.jpg" alt=""/>
+                                <div class="carousel-caption">Shirt and skirt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/4</div>
+                                <img src="./images/tevdren-refs-fullres/tev-relaxed3.jpg" alt=""/>
+                                <div class="carousel-caption">Belt, gloves, apron, and shoes</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/4</div>
+                                <img src="./images/tevdren-refs-fullres/tev-relaxed4.jpg" alt=""/>
+                                <div class="carousel-caption">Cloak and pin</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "tevcasual2": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-cool1.jpg" alt=""/>
+                                <div class="carousel-caption">Slip and pants (shown post-Dagoth Ur)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-cool2.jpg" alt=""/>
+                                <div class="carousel-caption">Gloves and shoes</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/3</div>
+                                <img src="./images/tevdren-refs-fullres/tev-cool3.jpg" alt=""/>
+                                <div class="carousel-caption">Dress, sash, and belt accessories</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "tevtribunal": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-tribunal1.jpg" alt=""/>
+                                <div class="carousel-caption">Slip and pants (shown post-Dagoth Ur)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-tribunal2.jpg" alt=""/>
+                                <div class="carousel-caption">Underdress</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-tribunal3.jpg" alt=""/>
+                                <div class="carousel-caption">Overdress</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-tribunal4.jpg" alt=""/>
+                                <div class="carousel-caption">Sash, belt, shoes, and gloves</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-tribunal5.jpg" alt=""/>
+                                <div class="carousel-caption">Bracelets and necklace</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "tevsolstheim": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-solstheim1.jpg" alt=""/>
+                                <div class="carousel-caption">Slip and pants (shown post-Dagoth Ur)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-solstheim2.jpg" alt=""/>
+                                <div class="carousel-caption">Underdress</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-solstheim3.jpg" alt=""/>
+                                <div class="carousel-caption">Middle dress</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-solstheim4.jpg" alt=""/>
+                                <div class="carousel-caption">Overdress, sash, and belt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/5</div>
+                                <img src="./images/tevdren-refs-fullres/tev-solstheim5.jpg" alt=""/>
+                                <div class="carousel-caption">Chest wrap, bracelets, necklace, gloves, and shoes</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drenscars": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/2</div>
+                                <img src="./images/tevdren-refs-fullres/dren-base-early.jpg" alt=""/>
+                                <div class="carousel-caption">Original, pre-Red Mountain</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/2</div>
+                                <img src="./images/tevdren-refs-fullres/dren-base-tribunal.jpg" alt=""/>
+                                <div class="carousel-caption">Post-Red Mountain</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drenunderwear": `<div class="carousel-slide">
+                                <div class="carousel-number">1/1</div>
+                                <img src="./images/tevdren-refs-fullres/dren-underwear.jpg" alt=""/>
+                                <div class="carousel-caption">Undergarments and loose hair (shown pre-Red Mountain)</div>
+                            </div>`,
+                "drenmsq": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq1.jpg" alt=""/>
+                                <div class="carousel-caption">Pants (shown pre-Red Mountain)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq2.jpg" alt=""/>
+                                <div class="carousel-caption">Shirt, belt, and socks</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq3.jpg" alt=""/>
+                                <div class="carousel-caption">Chest belt, wrist wrap, choker, and rings</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq4.jpg" alt=""/>
+                                <div class="carousel-caption">Wrap</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq5.jpg" alt=""/>
+                                <div class="carousel-caption">Cross-body strap and boots</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">6/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-msq6.jpg" alt=""/>
+                                <div class="carousel-caption">Traveling cloak</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drencasual1": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/4</div>
+                                <img src="./images/tevdren-refs-fullres/dren-relaxed1.jpg" alt=""/>
+                                <div class="carousel-caption">Pants (shown post-Red Mountain)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/4</div>
+                                <img src="./images/tevdren-refs-fullres/dren-relaxed2.jpg" alt=""/>
+                                <div class="carousel-caption">Shirt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/4</div>
+                                <img src="./images/tevdren-refs-fullres/dren-relaxed3.jpg" alt=""/>
+                                <div class="carousel-caption">Sash and boots</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/4</div>
+                                <img src="./images/tevdren-refs-fullres/dren-relaxed4.jpg" alt=""/>
+                                <div class="carousel-caption">Belt, bootwraps, choker, bracelet, and rings</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drencasual2": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/3</div>
+                                <img src="./images/tevdren-refs-fullres/dren-cool1.jpg" alt=""/>
+                                <div class="carousel-caption">Pants (shown post-Red Mountain)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/3</div>
+                                <img src="./images/tevdren-refs-fullres/dren-cool2.jpg" alt=""/>
+                                <div class="carousel-caption">Shirt and sash</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/3</div>
+                                <img src="./images/tevdren-refs-fullres/dren-cool3.jpg" alt=""/>
+                                <div class="carousel-caption">Boots, choker, bracelet, and rings</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drentribunal": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/5</div>
+                                <img src="./images/tevdren-refs-fullres/dren-tribunal1.jpg" alt=""/>
+                                <div class="carousel-caption">Pants (shown post-Red Mountain)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/5</div>
+                                <img src="./images/tevdren-refs-fullres/dren-tribunal2.jpg" alt=""/>
+                                <div class="carousel-caption">Undershirt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/5</div>
+                                <img src="./images/tevdren-refs-fullres/dren-tribunal3.jpg" alt=""/>
+                                <div class="carousel-caption">Overshirt and tied belt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/5</div>
+                                <img src="./images/tevdren-refs-fullres/dren-tribunal4.jpg" alt=""/>
+                                <div class="carousel-caption">Hooded scarf and boots</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/5</div>
+                                <img src="./images/tevdren-refs-fullres/dren-tribunal5.jpg" alt=""/>
+                                <div class="carousel-caption">Belt, sash, supplies, bootwraps, choker, bracelet, and rings</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                "drensolstheim": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            
+                            <div class="carousel-slide">
+                                <div class="carousel-number">1/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim1.jpg" alt=""/>
+                                <div class="carousel-caption">Pants (shown post-Red Mountain)</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">2/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim2.jpg" alt=""/>
+                                <div class="carousel-caption">Shirt</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">3/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim3.jpg" alt=""/>
+                                <div class="carousel-caption">Jacket and socks</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">4/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim4.jpg" alt=""/>
+                                <div class="carousel-caption">Sash, belt, and boots</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">5/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim5.jpg" alt=""/>
+                                <div class="carousel-caption">Bootwraps, choker, necklaces, and rings</div>
+                            </div>
+                            <div class="carousel-slide" style="display: none;">
+                                <div class="carousel-number">6/6</div>
+                                <img src="./images/tevdren-refs-fullres/dren-solstheim5.jpg" alt=""/>
+                                <div class="carousel-caption">Coat</div>
+                            </div>
+                
+                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+            }
+            let slideIndex = 1;
         </script>
     </head>
 
@@ -46,11 +367,79 @@
                 <div class="body-content">
                     <div class="page-header">Tev and Dren</div>
                     <div class="page-subheader">references</div>
-                    <div class="page-text">WIP</div>
+                    <div class="tevdren-ref-container">
+                        <div class="tevdren-ref-column">
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-base.jpg" onclick="spawnModal('tevscars')"/><br/>full scar references</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-underwear.jpg" onclick="spawnModal('tevunderwear')"/><br/>underwear</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-msq.jpg" onclick="spawnModal('tevmsq')"/><br/>morrowind main quest</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-relaxed.jpg" onclick="spawnModal('tevcasual1')"/><br/>casual outfit I</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-cool.jpg" onclick="spawnModal('tevcasual2')"/><br/>casual outfit II</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-tribunal.jpg" onclick="spawnModal('tevtribunal')"/><br/>tribunal</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-solstheim.jpg" onclick="spawnModal('tevsolstheim')"/><br/>solstheim</div>
+                        </div>
+                        <div class="tevdren-ref-column">
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-base.jpg" onclick="spawnModal('drenscars')"/><br/>full scar references</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-underwear.jpg" onclick="spawnModal('drenunderwear')"/><br/>underwear</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-msq.jpg" onclick="spawnModal('drenmsq')"/><br/>morrowind main quest</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-relaxed.jpg" onclick="spawnModal('drencasual1')"/><br/>casual outfit I</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-cool.jpg" onclick="spawnModal('drencasual2')"/><br/>casual outfit II</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-tribunal.jpg" onclick="spawnModal('drentribunal')"/><br/>tribunal</div>
+                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-solstheim.jpg" onclick="spawnModal('drensolstheim')"/><br/>solstheim</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
+        </div>
+
+
+        <div style="display: none;" class="ref-modal" id="ref-modal" onclick="closeModal()">
+            <div class="ref-modal-inner">
+                <div id="carousel-container" class="carousel-container">
+                    <!-- carousel gets inserted here -->
+                </div>
+
+                <script>
+                    function spawnModal(name) {
+                        var carousel = document.getElementById("carousel-container");
+                        carousel.innerHTML = carousels[name];
+                        var modal = document.getElementById("ref-modal");
+                        modal.style.display = "block";
+                    }
+                    
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("carousel-slide");
+                        if (n > slides.length) {slideIndex = 1} 
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        if (slides.length >= 1 ) {
+                        slides[slideIndex-1].style.display = "block";
+                        }
+                    }  
+                    
+                    function preventClickThrough(e) {
+                        e.stopImmediatePropagation();
+                    }
+                    var image = document.getElementById("carousel-container");
+                    image.addEventListener("click", preventClickThrough);
+
+                    function closeModal() {
+                        var modal = document.getElementById("ref-modal");
+                        modal.style.display = "none";
+                    }
+                </script>
+                <div onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+            </div>
         </div>
 
 

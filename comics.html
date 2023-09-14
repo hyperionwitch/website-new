@@ -3,8 +3,8 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
-        <script> // variables for subheader text
-            var messages = [
+        <script> 
+            var messages = [ // variables for subheader text
                 "human, <em>allegedly</em>",
                 "the \"other\" white meat",
                 "the rattling is getting closer"
@@ -235,6 +235,8 @@
                 image.src = source;
                 var modal = document.getElementById("comic-modal");
                 modal.style.display = "block";
+                var scroll = document.getElementById("comic-modal-inner");
+                scroll.scrollTop = 0;
             }
             function closeModal() {
                 var modal = document.getElementById("comic-modal");
@@ -243,7 +245,7 @@
         </script>
 
         <div style="display: none;" id="comic-modal" class="comic-modal"  onclick="closeModal()">
-            <div class="comic-modal-inner">
+            <div id="comic-modal-inner" class="comic-modal-inner">
                 <img src="" alt="" id="comic-modal-image" class="comic-modal-image">
                 <script>
                     function preventClickThrough(e) {
