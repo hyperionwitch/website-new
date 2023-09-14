@@ -16,19 +16,16 @@
                 <span id="hmm-text">down here!</span>
             </div>
             <script>
-                const controller = new AbortController();
-                const el = document.getElementById("hmm-container");
-                el.addEventListener("mouseover", changeText, { signal: controller.signal });
+                var el = document.getElementById("hmm-container");
+                el.addEventListener("mouseover", changeText);
                 
                 function changeText() {
-                    const text = document.getElementById("hmm-text");
+                    var text = document.getElementById("hmm-text");
                     if (text.innerHTML === "down here!") {
                         text.innerHTML = "uwu";
-                    } else {
-                        text.innerHTML = "uwu";
-                        controller.abort();
                     }
-                    text.addEventListener("mouseover", changeText)
+                    var el = document.getElementById("hmm-container");
+                    el.removeEventListener("mouseover", changeText);
                 }
             </script>
         </section>
