@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
+        <meta charset="UTF-8">
+        <title>Hyperionwitch Art - Illustrations and Comics by Gillian Renk</title>
+        <meta name="description" content="Part portfolio, part personal blog, all harmless with a coat of sinister paint">
+        <meta name="author" content="Gillian Renk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="hyperionwitch, artist, illustration, comic, comics, sequentialart">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
         <script> 
             var messages = [ // variables for subheader text
-                "human, <em>allegedly</em>",
-                "the \"other\" white meat",
-                "the rattling is getting closer"
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">human, <em>allegedly</em></a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`,
             ];
+            var showOrHide = [
+                "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
+            ]
         </script>
     </head>
 
@@ -18,8 +27,8 @@
         <div class="content-container">
             
             
-            <div class="nav-container">
-                <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
+            <nav class="nav-container">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" /></a>
                 <div class="nav-links">
                     <ul>
                         <li class="highlight">home</li>
@@ -29,32 +38,51 @@
                     </ul>
                 </div>
                 <div class="nav-bg"></div>
-            </div>
+            </nav>
 
 
             <div class="body-container">
-                <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div id="subheader" class="subheader">
+                <a class="header-link" href="./index.html">
+                    <header class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</header>
+                </a>
+                <header id="subheader" class="subheader">
                     <script> //randomizes subheader text
                         var el = document.getElementById("subheader");
                         var choice = Math.floor(Math.random() * messages.length);
                         el.innerHTML = messages[choice];
                     </script>
-                </div>
+                </header>
 
-                <div class="body-content">
+                <section class="body-content">
                     <div class="page-header">Updates</div>
                     <div class="page-subheader">goings-on around the site</div>
                     <div class="page-text">
                         <div class="updates">
+                            <!-- <div class="update-block">
+                                <div class="update-date">September 8th, 2023</div>
+                                <div class="update-text">Finally putting my money where my mouth is re: going back to the good ol' internet days, and now I have a website.  Half portfolio, half personal site, feel free to browse while I get things in order.</div>
+                            </div>
+
+                            <hr> -->
+                            
                             <div class="update-block">
                                 <div class="update-date">September 8th, 2023</div>
                                 <div class="update-text">Finally putting my money where my mouth is re: going back to the good ol' internet days, and now I have a website.  Half portfolio, half personal site, feel free to browse while I get things in order.</div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
+
+
+        <div id="index-secret" class="secret" style="display: none;">
+            <a href="./whatsthis.html" target="_blank">?</a>
+            <script>
+                var secret = document.getElementById("index-secret");
+                var n = Math.floor(Math.random() * showOrHide.length);
+                secret.style.display = showOrHide[n];
+            </script>
+        </div>
         
         
         </div>

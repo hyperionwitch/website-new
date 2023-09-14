@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hmm?</title>
+        <meta name="description" content="Part portfolio, part personal blog, all harmless with a coat of sinister paint">
+        <meta name="author" content="Gillian Renk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+
+    <body>
+        <section class="hmm-body">
+            <div id="hmm-container">
+                <span id="hmm-text">down here!</span>
+            </div>
+            <script>
+                const controller = new AbortController();
+                const el = document.getElementById("hmm-container");
+                el.addEventListener("mouseover", changeText, { signal: controller.signal });
+                
+                function changeText() {
+                    const text = document.getElementById("hmm-text");
+                    if (text.innerHTML === "down here!") {
+                        text.innerHTML = "uwu";
+                    } else {
+                        text.innerHTML = "uwu";
+                        controller.abort();
+                    }
+                    text.addEventListener("mouseover", changeText)
+                }
+            </script>
+        </section>
+
+        
+    </body>

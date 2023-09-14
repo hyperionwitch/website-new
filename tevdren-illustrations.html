@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
+        <meta charset="UTF-8">
+        <title>Tev/Dren Illustrations - Hyperionwitch Art</title>
+        <meta name="description" content="Illustrations by Gillian Renk">
+        <meta name="author" content="Gillian Renk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="hyperionwitch, artist, illustration, elderscrolls, morrowind">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="./index.css">
         <script> 
             var messages = [ // variables for subheader text
-                "human, <em>allegedly</em>",
-                "the \"other\" white meat",
-                "the rattling is getting closer"
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">human, <em>allegedly</em></a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`
             ];
         </script>
     </head>
@@ -18,8 +24,8 @@
         <div class="content-container">
             
             
-            <div class="nav-container">
-                <img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" />
+            <nav class="nav-container">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" /></a>
                 <div class="nav-links">
                     <ul>
                         <li><a href="./index.html">home</a></li>
@@ -29,21 +35,23 @@
                     </ul>
                 </div>
                 <div class="nav-bg"></div>
-            </div>
+            </nav>
 
 
             <div class="body-container">
-                <div class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</div>
-                <div id="subheader" class="subheader">
+                <a class="header-link" href="./index.html">
+                    <header class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</header>
+                </a>
+                <header id="subheader" class="subheader">
                     <script> //randomizes subheader text
                         var el = document.getElementById("subheader");
                         var choice = Math.floor(Math.random() * messages.length);
                         el.innerHTML = messages[choice];
                     </script>
                     <div class="back-button"><a href="./comics.html">&lt; back to comics</a></div>
-                </div>
+                </header>
 
-                <div class="body-content">
+                <section class="body-content">
                     <div class="page-header">Tev and Dren</div>
                     <div class="page-subheader">misc. illustrations and sketches</div>
                     <div id="tevdren-illustration-loading" class="loading" style="display: block;">loading...</div>
@@ -85,7 +93,7 @@
 
                         window.setTimeout(hideLoading, 990)
                     </script>
-                </div>
+                </section>
             </div>
 
 

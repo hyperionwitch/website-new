@@ -55,6 +55,12 @@ body {
 
 
 
+.header-link {
+    text-decoration: none;
+}
+
+
+
 .nav-container {
     float: left;
     width: 305px;
@@ -237,6 +243,7 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 
 .illustration-modal {
@@ -268,6 +275,7 @@ body {
     text-shadow: 0px 0px 10px var(--bg-color);
     color: var(--link-color);
     transition: 0.3s;
+    cursor: pointer;
 }
 .close-illustration-modal:hover {
     color: var(--highlight-color);
@@ -300,6 +308,7 @@ body {
 .tevdren-comiclink {
     text-align: center;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 .tevdren-comiclink img {
     background-color: var(--bg-color2);
@@ -376,6 +385,7 @@ body {
     text-shadow: 0px 0px 10px var(--bg-color);
     color: var(--link-color);
     transition: 0.3s;
+    cursor: pointer;
 }
 .close-comic-modal:hover {
     color: var(--highlight-color);
@@ -399,6 +409,9 @@ body {
     color: var(--text-color2);
     font-size: 20pt;
     padding: 20px 0px;
+}
+.tevdren-ref-block {
+    cursor: pointer;
 }
 .ref-modal {
     height: 100%;
@@ -471,19 +484,35 @@ body {
     margin: 20px;
     text-align: center;
 }
-.about-link-block a {
-    display: block;
-}
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-    font-size: 15pt;
+.fa {
+    padding-right: 10px;
 }
 .about-link-descrip {
     font-family: var(--body-font);
     color: var(--text-color2);
     font-size: 10pt;
+    display: block;
+    padding-top: 5px;
+}
+
+.secret {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 20pt;
+}
+.secret a {
+    color: var(--bg-color2);
+    text-decoration: none;
+}
+.hmm-body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-color2);
+}
+.hmm-body span {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
 }
