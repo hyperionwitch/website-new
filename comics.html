@@ -15,6 +15,9 @@
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`
             ];
+            var showOrHide = [
+                "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
+            ]
         </script>
     </head>
 
@@ -24,8 +27,8 @@
         <div class="content-container">
             
             
-            <nav class="nav-container">
-                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" /></a>
+            <nav class="nav-container" aria-label="primary">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
                 <div class="nav-links">
                     <ul>
                         <li><a href="./index.html">home</a></li>
@@ -39,198 +42,208 @@
 
 
             <div class="body-container">
-                <a class="header-link" href="./index.html">
-                    <header class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</header>
-                </a>
-                <header id="subheader" class="subheader">
-                    <script> //randomizes subheader text
-                        var el = document.getElementById("subheader");
-                        var choice = Math.floor(Math.random() * messages.length);
-                        el.innerHTML = messages[choice];
-                    </script>
+                <header>
+                    <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
+                    <h2 id="subheader" class="subheader">
+                        <script> //randomizes subheader text
+                            var el = document.getElementById("subheader");
+                            var choice = Math.floor(Math.random() * messages.length);
+                            el.innerHTML = messages[choice];
+                        </script>
+                    </h2>
                 </header>
 
-                <section class="body-content">
-                    <div class="page-header">Tev and Dren</div>
-                    <div class="page-subheader">the elder scrolls III fancomic (ongoing)</div>
-                    <div class="page-text">Drawn highly out of order, but these are posted here in chronological story order for easier reading. New content
-                        will be highlighted. For miscellaneous Tev and Dren content, click the links below:</div>
-                    <div class="tevdren-links">
+                <main class="body-content">
+                    <h3 class="page-header">Tev and Dren</h3>
+                    <h4 class="page-subheader">the elder scrolls III fancomic (ongoing)</h4>
+                    <p class="page-text">Drawn highly out of order, but these are posted here in chronological story order for easier reading. New content
+                        will be highlighted. For miscellaneous Tev and Dren content, click the links below:</p>
+                    <nav class="tevdren-links" aria-label="additional comic content">
                         <a class="link" href="./tevdren-references.html">tev and dren references</a>
                         <a class="link" href="./tevdren-illustrations.html">misc. illustrations and sketches</a>
-                        <a class="link" href="">tumblr asks</a>
-                    </div>
-                    <div class="tevdren-comics">
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-arrival.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arrival.jpg')" alt="" />
-                            <span>arrival in vvardenfell</span>
+                        <a class="link" href="">tumblr asks</a> <!-- decide if this is going to be external or not -->
+                    </nav>
+                    <section class="tevdren-comics">
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-arrival.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arrival.jpg')" alt="view this comic" />
+                            <h5>arrival in vvardenfell</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-firstmeeting.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstmeeting.jpg')" alt="" />
-                            <span>the first meeting</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-firstmeeting.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstmeeting.jpg')" alt="view this comic" />
+                            <h5>the first meeting</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-firstrobbery.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstrobbery.jpg')" alt="" />
-                            <span>first robbery foiled</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-firstrobbery.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstrobbery.jpg')" alt="view this comic" />
+                            <h5>first robbery foiled</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-gettingintheway.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-gettingintheway.jpg')" alt="" />
-                            <span>getting in the way</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-gettingintheway.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-gettingintheway.jpg')" alt="view this comic" />
+                            <h5>getting in the way</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-rockystart.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-rockystart.jpg')" alt="" />
-                            <span>a rocky start</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-rockystart.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-rockystart.jpg')" alt="view this comic" />
+                            <h5>a rocky start</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-severalweeks.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-severalweeks.jpg')" alt="" />
-                            <span>several weeks in</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-severalweeks.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-severalweeks.jpg')" alt="view this comic" />
+                            <h5>several weeks in</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-pressingforanswers.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-pressingforanswers.jpg')" alt="" />
-                            <span>pressing for<br/>answers</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-pressingforanswers.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-pressingforanswers.jpg')" alt="view this comic" />
+                            <h5>pressing for answers</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-heartfeltconversation.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-heartfeltconversation.jpg')" alt="" />
-                            <span>a heartfelt<br/>conversation</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-heartfeltconversation.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-heartfeltconversation.jpg')" alt="view this comic" />
+                            <h5>a heartfelt conversation</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-journeybegins.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-journeybegins.jpg')" alt="" />
-                            <span>the journey begins</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-journeybegins.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-journeybegins.jpg')" alt="view this comic" />
+                            <h5>the journey begins</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-arkngthand1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arkngthand1.jpg')" alt="" />
-                            <span>arkngthand, pt. I</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-arkngthand1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arkngthand1.jpg')" alt="view this comic" />
+                            <h5>arkngthand, pt. I</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-arkngthand2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arkngthand2.jpg')" alt="" />
-                            <span>arkngthand, pt. II</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-arkngthand2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-arkngthand2.jpg')" alt="view this comic" />
+                            <h5>arkngthand, pt. II</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-afterarkngthand.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-afterarkngthand.jpg')" alt="" />
-                            <span>after arkngthand</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-afterarkngthand.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-afterarkngthand.jpg')" alt="view this comic" />
+                            <h5>after arkngthand</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-firstdream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstdream.jpg')" alt="" />
-                            <span>the first dream</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-firstdream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstdream.jpg')" alt="view this comic" />
+                            <h5>the first dream</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-roadtoandranotomb.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-roadtoandranotomb.jpg')" alt="" />
-                            <span>on the road to<br/>andrano tomb</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-roadtoandranotomb.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-roadtoandranotomb.jpg')" alt="view this comic" />
+                            <h5>on the road to andrano tomb</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-nicknames.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nicknames.jpg')" alt="" />
-                            <span>nicknames</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-nicknames.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nicknames.jpg')" alt="view this comic" />
+                            <h5>nicknames</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-seconddream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-seconddream.jpg')" alt="" />
-                            <span>the second dream</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-seconddream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-seconddream.jpg')" alt="view this comic" />
+                            <h5>the second dream</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-vivecinformants.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-vivecinformants.jpg')" alt="" />
-                            <span>after meeting the<br/>vivec informants</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-vivecinformants.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-vivecinformants.jpg')" alt="view this comic" />
+                            <h5>after meeting the vivec informants</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-thirddream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-thirddream.jpg')" alt="" />
-                            <span>the third dream</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-thirddream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-thirddream.jpg')" alt="view this comic" />
+                            <h5>the third dream</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-backfromvivec1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-backfromvivec1.jpg')" alt="" />
-                            <span>back from vivec</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-backfromvivec1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-backfromvivec1.jpg')" alt="view this comic" />
+                            <h5>back from vivec</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-backfromvivec2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-backfromvivec2.jpg')" alt="" />
-                            <span>later that night</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-backfromvivec2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-backfromvivec2.jpg')" alt="view this comic" />
+                            <h5>later that night</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-homeownership.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-homeownership.jpg')" alt="" />
-                            <span>homeownership</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-homeownership.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-homeownership.jpg')" alt="view this comic" />
+                            <h5>homeownership</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-latenightvisit.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-latenightvisit.jpg')" alt="" />
-                            <span>late night visit</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-latenightvisit.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-latenightvisit.jpg')" alt="view this comic" />
+                            <h5>late night visit</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-sleepersawake.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-sleepersawake.jpg')" alt="" />
-                            <span>sleepers awake</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-sleepersawake.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-sleepersawake.jpg')" alt="view this comic" />
+                            <h5>sleepers awake</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-fourthdream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-fourthdream.jpg')" alt="" />
-                            <span>the fourth dream</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-fourthdream.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-fourthdream.jpg')" alt="view this comic" />
+                            <h5>the fourth dream</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-nerevarinenews.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nerevarinenews.jpg')" alt="" />
-                            <span>nerevarine news</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-nerevarinenews.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nerevarinenews.jpg')" alt="view this comic" />
+                            <h5>nerevarine news</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-apologyandagift.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-apologyandagift.jpg')" alt="" />
-                            <span>apology and a gift</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-apologyandagift.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-apologyandagift.jpg')" alt="view this comic" />
+                            <h5>apology and a gift</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-bondingwiththeurshilaku.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-bondingwiththeurshilaku.jpg')" alt="" />
-                            <span>bonding time in the<br/>urshilaku camp</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-bondingwiththeurshilaku.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-bondingwiththeurshilaku.jpg')" alt="view this comic" />
+                            <h5>bonding time with the urshilaku</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-firstwisewomanwrapup.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstwisewomanwrapup.jpg')" alt="" />
-                            <span>after first meeting<br/>with nibani maesa</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-firstwisewomanwrapup.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-firstwisewomanwrapup.jpg')" alt="view this comic" />
+                            <h5>after first meeting with nibani maesa</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-headingtoilunibi.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-headingtoilunibi.jpg')" alt="" />
-                            <span>heading to ilunibi</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-headingtoilunibi.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-headingtoilunibi.jpg')" alt="view this comic" />
+                            <h5>heading to ilunibi</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-ilunibi.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-ilunibi.jpg')" alt="" />
-                            <span>ilunibi</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-ilunibi.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-ilunibi.jpg')" alt="view this comic" />
+                            <h5>ilunibi</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-gares.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-gares.jpg')" alt="" />
-                            <span>battle with<br/>dagoth gares</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-gares.jpg" onclick="spawnModal('./images/illo-fullres/tevdren-gares.jpg')" alt="view this comic" />
+                            <h5>battle with dagoth gares</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-postgares.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-postgares.jpg')" alt="" />
-                            <span>dagoth gares<br/>aftermath</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-postgares.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-postgares.jpg')" alt="view this comic" />
+                            <h5>dagoth gares aftermath</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-corprusdrama1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-corprusdrama1.jpg')" alt="" />
-                            <span>corprus drama, pt. I</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-corprusdrama1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-corprusdrama1.jpg')" alt="view this comic" />
+                            <h5>corprus drama, pt. I</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-corprusdrama2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-corprusdrama2.jpg')" alt="" />
-                            <span>corprus drama, pt. II</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-corprusdrama2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-corprusdrama2.jpg')" alt="view this comic" />
+                            <h5>corprus drama, pt. II</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-nerevarinechoice.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nerevarinechoice.jpg')" alt="" />
-                            <span>nerevarine choice</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-nerevarinechoice.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-nerevarinechoice.jpg')" alt="view this comic" />
+                            <h5>nerevarine choice</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img class="tevdren-newcomic" src="./images/comics-thumbs/tevdren-love.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-love.jpg')" alt="" />
-                            <span>midnight<br/>conversations</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img class="tevdren-newcomic" src="./images/comics-thumbs/tevdren-love.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-love.jpg')" alt="view this comic" />
+                            <h5>midnight conversations</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-downtimeinbalmora.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-downtimeinbalmora.jpg')" alt="" />
-                            <span>downtime in balmora</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-downtimeinbalmora.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-downtimeinbalmora.jpg')" alt="view this comic" />
+                            <h5>downtime in balmora</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-confessionatghostgate.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-confessionatghostgate.jpg')" alt="" />
-                            <span>confession before<br/>the final battle</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-confessionatghostgate.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-confessionatghostgate.jpg')" alt="view this comic" />
+                            <h5>confession before the final battle</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-harddecision.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-harddecision.jpg')" alt="" />
-                            <span>a hard decision</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-harddecision.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-harddecision.jpg')" alt="view this comic" />
+                            <h5>a hard decision</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-battlewithdagothur1.jpg')" alt="" />
-                            <span>battle with<br/>dagoth ur, pt. I</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur1.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-battlewithdagothur1.jpg')" alt="view this comic" />
+                            <h5>battle with dagoth ur, pt. I</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-battlewithdagothur2.jpg')" alt="" />
-                            <span>battle with<br/>dagoth ur, pt. II</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-battlewithdagothur2.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-battlewithdagothur2.jpg')" alt="view this comic" />
+                            <h5>battle with dagoth ur, pt. II</h5>
                         </div>
-                        <div class="tevdren-comiclink">
-                            <img src="./images/comics-thumbs/tevdren-afterthebattle.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-afterthebattle.jpg')" alt="" />
-                            <span>after the battle</span>
+                        <div role="button" tabindex="0" class="tevdren-comiclink">
+                            <img src="./images/comics-thumbs/tevdren-afterthebattle.jpg" onclick="spawnModal('./images/comics-fullres/tevdren-afterthebattle.jpg')" alt="view this comic" />
+                            <h5>after the battle</h5>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </main>
+            </div>
+
+
+            <div id="index-secret" class="secret" style="display: none;">
+                <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
+                <script>
+                    var secret = document.getElementById("index-secret");
+                    var n = Math.floor(Math.random() * showOrHide.length);
+                    secret.style.display = showOrHide[n];
+                </script>
             </div>
 
 
@@ -262,7 +275,7 @@
                     var image = document.getElementById("comic-modal-image");
                     image.addEventListener("click", preventClickThrough);
                 </script>
-                <div onclick="closeModal()" class="close-comic-modal">&lt; back</div>
+                <div role="button" onclick="closeModal()" class="close-comic-modal">&lt; back</div>
             </div>
         </div>
 

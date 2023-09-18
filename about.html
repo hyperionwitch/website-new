@@ -16,6 +16,9 @@
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`
             ];
+            var showOrHide = [
+                "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
+            ]
         </script>
     </head>
 
@@ -25,8 +28,8 @@
         <div class="content-container">
             
             
-            <nav class="nav-container">
-                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" /></a>
+            <nav class="nav-container" aria-label="primary">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
                 <div class="nav-links">
                     <ul>
                         <li><a href="./index.html">home</a></li>
@@ -40,29 +43,39 @@
 
 
             <div class="body-container">
-                <a class="header-link" href="./index.html">
-                    <header class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</header>
-                </a>
-                <header id="subheader" class="subheader">
-                    <script> //randomizes subheader text
-                        var el = document.getElementById("subheader");
-                        var choice = Math.floor(Math.random() * messages.length);
-                        el.innerHTML = messages[choice];
-                    </script>
+                <header>
+                    <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
+                    <h2 id="subheader" class="subheader">
+                        <script> //randomizes subheader text
+                            var el = document.getElementById("subheader");
+                            var choice = Math.floor(Math.random() * messages.length);
+                            el.innerHTML = messages[choice];
+                        </script>
+                    </h2>
                 </header>
 
-                <section class="body-content">
-                    <div class="page-header">About the Artist</div>
-                    <div class="page-subheader">gillian renk - she/her</div>
-                    <div class="page-text">Gillian Renk is a shambling pile of goth dust and bird bones (read: artist) with a passion for historic art styles, digital painting, and comics. With a focus on fanart of video games and other media, she also dabbles in cosplay, photography, and web design. She finds the distance of third person description to be a comfortable barrier to writing about herself, which is a task that is otherwise torture.</div>
-                    <div class="about-links">
+                <main class="body-content">
+                    <h3 class="page-header">About the Artist</h3>
+                    <h4 class="page-subheader">gillian renk - she/her</h4>
+                    <p class="page-text">Gillian Renk is a shambling pile of goth dust and bird bones (read: artist) with a passion for historic art styles, digital painting, and comics. With a focus on fanart of video games and other media, she also dabbles in cosplay, photography, and web design. She finds the distance of third person description to be a comfortable barrier to writing about herself, which is a task that is otherwise torture.</p>
+                    <nav class="about-links" aria-label="social">
                         <div class="about-link-block"><a class="link" href="https://hyperionwitch-art.tumblr.com/" target="_blank"><span class="fa fa-tumblr"></span> tumblr</a><span class="about-link-descrip">active art blog</span></div>
                         <div class="about-link-block"><a class="link" href="https://twitter.com/hyperionwitch" target="_blank"><span class="fa fa-twitter"></span> twitter</a><span class="about-link-descrip">semi-professional updates</span></div>
                         <div class="about-link-block"><a class="link" href="https://www.twitch.tv/hyperionwitch" target="_blank"><span class="fa fa-twitch"></span> twitch</a><span class="about-link-descrip">streams once a month</span></div>
                         <div class="about-link-block"><a class="link" href="https://www.instagram.com/hyperionwitch_art/" target="_blank"><span class="fa fa-instagram"></span> instagram</a><span class="about-link-descrip">photography and cosplay updates</span></div>
                         <div class="about-link-block"><a class="link" href="https://www.deviantart.com/hyperionwitch" target="_blank"><span class="fa fa-deviantart"></span> deviantart</a><span class="about-link-descrip">an ancient record</span></div>
-                    </div>
-                </section>
+                    </nav>
+                </main>
+            </div>
+
+
+            <div id="index-secret" class="secret" style="display: none;">
+                <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
+                <script>
+                    var secret = document.getElementById("index-secret");
+                    var n = Math.floor(Math.random() * showOrHide.length);
+                    secret.style.display = showOrHide[n];
+                </script>
             </div>
         
         

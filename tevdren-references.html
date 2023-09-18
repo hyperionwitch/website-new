@@ -336,6 +336,9 @@
                             <a class="carousel-next" onclick="plusSlides(1)">></a>`,
             }
             let slideIndex = 1;
+            var showOrHide = [
+                "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
+            ]
         </script>
     </head>
 
@@ -345,8 +348,8 @@
         <div class="content-container">
             
             
-            <nav class="nav-container">
-                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="a skull with a moon in its mouth, flanked by lilacs and surrounded by a spiked halo" /></a>
+            <nav class="nav-container" aria-label="primary">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
                 <div class="nav-links">
                     <ul>
                         <li><a href="./index.html">home</a></li>
@@ -360,42 +363,94 @@
 
 
             <div class="body-container">
-                <a class="header-link" href="./index.html">
-                    <header class="header"><span class="highlight">H</span>yperionwitch <span class="highlight">A</span>rt</header>
-                </a>
-                <header id="subheader" class="subheader">
-                    <script> //randomizes subheader text
-                        var el = document.getElementById("subheader");
-                        var choice = Math.floor(Math.random() * messages.length);
-                        el.innerHTML = messages[choice];
-                    </script>
-                    <div class="back-button"><a class="link" href="./comics.html">&lt; back to comics</a></div>
+                <header>
+                    <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
+                    <h2 id="subheader" class="subheader">
+                        <script> //randomizes subheader text
+                            var el = document.getElementById("subheader");
+                            var choice = Math.floor(Math.random() * messages.length);
+                            el.innerHTML = messages[choice];
+                        </script>
+                        <div class="back-button"><a class="link" href="./comics.html">&lt; back to comics</a></div>
+                    </h2>
                 </header>
                 
-                <section class="body-content">
-                    <div class="page-header">Tev and Dren</div>
-                    <div class="page-subheader">references</div>
-                    <div class="tevdren-ref-container">
+                <main class="body-content">
+                    <h3 class="page-header">Tev and Dren</h3>
+                    <h4 class="page-subheader">references</h4>
+                    <section class="tevdren-ref-container">
                         <div class="tevdren-ref-column">
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-base.jpg" onclick="spawnModal('tevscars')"/><br/>full scar references</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-underwear.jpg" onclick="spawnModal('tevunderwear')"/><br/>underwear</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-msq.jpg" onclick="spawnModal('tevmsq')"/><br/>morrowind main quest</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-relaxed.jpg" onclick="spawnModal('tevcasual1')"/><br/>casual outfit I</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-cool.jpg" onclick="spawnModal('tevcasual2')"/><br/>casual outfit II</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-tribunal.jpg" onclick="spawnModal('tevtribunal')"/><br/>tribunal</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/tev-solstheim.jpg" onclick="spawnModal('tevsolstheim')"/><br/>solstheim</div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevscars')">
+                                <img src="./images/tevdren-refs-thumbs/tev-base.jpg" alt="a side by side image of an elf in underwear, no hair, with scars on display"/>
+                                <p>full scar references</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevunderwear')">
+                                <img src="./images/tevdren-refs-thumbs/tev-underwear.jpg" alt="a side by side image "/>
+                                <p>underwear</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevmsq')">
+                                <img src="./images/tevdren-refs-thumbs/tev-msq.jpg" alt=""/>
+                                <p>morrowind main quest</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevcasual1')">
+                                <img src="./images/tevdren-refs-thumbs/tev-relaxed.jpg" alt=""/>
+                                <p>casual outfit I</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevcasual2')">
+                                <img src="./images/tevdren-refs-thumbs/tev-cool.jpg" alt=""/>
+                                <p>casual outfit II</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevtribunal')">
+                                <img src="./images/tevdren-refs-thumbs/tev-tribunal.jpg" alt=""/>
+                                <p>tribunal</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevsolstheim')">
+                                <img src="./images/tevdren-refs-thumbs/tev-solstheim.jpg" alt=""/>
+                                <p>solstheim</p>
+                            </div>
                         </div>
                         <div class="tevdren-ref-column">
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-base.jpg" onclick="spawnModal('drenscars')"/><br/>full scar references</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-underwear.jpg" onclick="spawnModal('drenunderwear')"/><br/>underwear</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-msq.jpg" onclick="spawnModal('drenmsq')"/><br/>morrowind main quest</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-relaxed.jpg" onclick="spawnModal('drencasual1')"/><br/>casual outfit I</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-cool.jpg" onclick="spawnModal('drencasual2')"/><br/>casual outfit II</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-tribunal.jpg" onclick="spawnModal('drentribunal')"/><br/>tribunal</div>
-                            <div class="tevdren-ref-block"><img src="./images/tevdren-refs-thumbs/dren-solstheim.jpg" onclick="spawnModal('drensolstheim')"/><br/>solstheim</div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenscars')">
+                                <img src="./images/tevdren-refs-thumbs/dren-base.jpg" alt=""/>
+                                <p>full scar references</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenunderwear')">
+                                <img src="./images/tevdren-refs-thumbs/dren-underwear.jpg" alt=""/>
+                                <p>underwear</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenmsq')">
+                                <img src="./images/tevdren-refs-thumbs/dren-msq.jpg" alt=""/>
+                                <p>morrowind main quest</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drencasual1')">
+                                <img src="./images/tevdren-refs-thumbs/dren-relaxed.jpg" alt=""/>
+                                <p>casual outfit I</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drencasual2')">
+                                <img src="./images/tevdren-refs-thumbs/dren-cool.jpg" alt=""/>
+                                <p>casual outfit II</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drentribunal')">
+                                <img src="./images/tevdren-refs-thumbs/dren-tribunal.jpg" alt=""/>
+                                <p>tribunal</p>
+                            </div>
+                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drensolstheim')">
+                                <img src="./images/tevdren-refs-thumbs/dren-solstheim.jpg" alt=""/>
+                                <p>solstheim</p>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </main>
+            </div>
+
+
+            <div id="index-secret" class="secret" style="display: none;">
+                <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
+                <script>
+                    var secret = document.getElementById("index-secret");
+                    var n = Math.floor(Math.random() * showOrHide.length);
+                    secret.style.display = showOrHide[n];
+                </script>
             </div>
 
 
@@ -446,7 +501,7 @@
                         modal.style.display = "none";
                     }
                 </script>
-                <div onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+                <div role="button" tabindex="0" onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
             </div>
         </div>
 
