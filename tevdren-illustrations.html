@@ -25,6 +25,10 @@
         
 
         <div class="content-container">
+            <div class="deco-container">
+                <img src="/images/hw-web-deco.png" class="deco-1" alt=""/>
+                <img src="/images/hw-web-deco.png" class="deco-2" alt=""/>
+            </div>
             
             
             <nav class="nav-container" aria-label="primary">
@@ -100,10 +104,10 @@
             </div>
 
 
-            <div id="index-secret" class="secret" style="display: none;">
+            <div id="tevdren-illo-secret" class="secret" style="display: none;">
                 <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
                 <script>
-                    var secret = document.getElementById("index-secret");
+                    var secret = document.getElementById("tevdren-illo-secret");
                     var n = Math.floor(Math.random() * showOrHide.length);
                     secret.style.display = showOrHide[n];
                 </script>
@@ -115,9 +119,9 @@
 
         <script>
             function spawnModal(source) {
-                var image = document.getElementById("illustration-modal-image");
+                var image = document.getElementById("tevdren-illo-modal-image");
                 image.src = source;
-                var modal = document.getElementById("illustration-modal");
+                var modal = document.getElementById("tevdren-illo-modal");
                 modal.style.display = "block";
             }
             function closeModal() {
@@ -126,9 +130,9 @@
             }
         </script>
 
-        <div style="display: none;" id="illustration-modal" class="illustration-modal"  onclick="closeModal()">
+        <div style="display: none;" id="tevdren-illo-modal" class="illustration-modal"  onclick="closeModal()">
             <div class="illustration-modal-inner">
-                <img src="" alt="" id="illustration-modal-image" class="illustration-modal-image">
+                <img src="" alt="" id="tevdren-illo-modal-image" class="illustration-modal-image">
                 <script>
                     function preventClickThrough(e) {
                         e.stopImmediatePropagation();
@@ -136,7 +140,7 @@
                     var image = document.getElementById("illustration-modal-image");
                     image.addEventListener("click", preventClickThrough);
                 </script>
-                <div role="button" onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+                <div role="button" onclick="closeModal()" class="close-modal">&lt; back</div>
             </div>
         </div>
 

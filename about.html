@@ -26,6 +26,10 @@
 
 
         <div class="content-container">
+            <div class="deco-container">
+                <img src="/images/hw-web-deco.png" class="deco-1" alt=""/>
+                <img src="/images/hw-web-deco.png" class="deco-2" alt=""/>
+            </div>
             
             
             <nav class="nav-container" aria-label="primary">
@@ -58,6 +62,7 @@
                     <h3 class="page-header">About the Artist</h3>
                     <h4 class="page-subheader">gillian renk - she/her</h4>
                     <p class="page-text">Gillian Renk is a shambling pile of goth dust and bird bones (read: artist) with a passion for historic art styles, digital painting, and comics. With a focus on fanart of video games and other media, she also dabbles in cosplay, photography, and web design. She finds the distance of third person description to be a comfortable barrier to writing about herself, which is a task that is otherwise torture.</p>
+                    <p class="page-text">Need to get ahold of me?  Email me at <a class="link" href="mailto:hyperionwitch.art@gmail.com">hyperionwitch.art@gmail.com</a></p>
                     <nav class="about-links" aria-label="social">
                         <div class="about-link-block"><a class="link" href="https://hyperionwitch-art.tumblr.com/" target="_blank"><span class="fa fa-tumblr"></span> tumblr</a><span class="about-link-descrip">active art blog</span></div>
                         <div class="about-link-block"><a class="link" href="https://twitter.com/hyperionwitch" target="_blank"><span class="fa fa-twitter"></span> twitter</a><span class="about-link-descrip">semi-professional updates</span></div>
@@ -69,10 +74,10 @@
             </div>
 
 
-            <div id="index-secret" class="secret" style="display: none;">
+            <div id="about-secret" class="secret" style="display: none;">
                 <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
                 <script>
-                    var secret = document.getElementById("index-secret");
+                    var secret = document.getElementById("about-secret");
                     var n = Math.floor(Math.random() * showOrHide.length);
                     secret.style.display = showOrHide[n];
                 </script>
