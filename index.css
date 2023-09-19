@@ -29,6 +29,12 @@ body {
     bottom: 0;
     position: static;
 }
+button {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #00000000;
+}
 
 
 
@@ -339,6 +345,7 @@ body {
     width: 150px;
     margin: auto;
     font-weight: lighter;
+    min-height: 62px;
 }
 .tevdren-newcomic {
     animation: newcomic 3s ease-in-out infinite;
@@ -420,7 +427,7 @@ body {
 .tevdren-ref-column {
     padding-bottom: 100px;
 }
-.tevdren-ref-block {
+.tevdren-ref-block { /* NEED TO FIX THIS */
     text-align: center;
     font-family: var(--subheader-font);
     color: var(--text-color2);

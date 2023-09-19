@@ -16,7 +16,7 @@
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`
             ];
             var carousels = { // variables for carousels
-                "tevscars": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                "tevscars": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/3</div>
@@ -34,13 +34,13 @@
                                 <div class="carousel-caption">post-Dagoth Ur</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
                 "tevunderwear": `<div class="carousel-slide">
                                 <div class="carousel-number">1/1</div>
                                 <img src="./images/tevdren-refs-fullres/tev-underwear.jpg" alt=""/>
                                 <div class="carousel-caption">Undergarments and loose hair (shown pre-Ilunibi)</div>
                             </div>`,
-                "tevmsq": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                "tevmsq": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/6</div>
@@ -73,8 +73,8 @@
                                 <div class="carousel-caption">Gifted coat, scarf, and shoe wraps</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "tevcasual1": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "tevcasual1": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/4</div>
@@ -97,8 +97,8 @@
                                 <div class="carousel-caption">Cloak and pin</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "tevcasual2": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "tevcasual2": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/3</div>
@@ -116,8 +116,8 @@
                                 <div class="carousel-caption">Dress, sash, and belt accessories</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "tevtribunal": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "tevtribunal": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/5</div>
@@ -145,8 +145,8 @@
                                 <div class="carousel-caption">Bracelets and necklace</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "tevsolstheim": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "tevsolstheim": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/5</div>
@@ -174,8 +174,8 @@
                                 <div class="carousel-caption">Chest wrap, bracelets, necklace, gloves, and shoes</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "drenscars": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "drenscars": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/2</div>
@@ -188,13 +188,13 @@
                                 <div class="carousel-caption">Post-Red Mountain</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
                 "drenunderwear": `<div class="carousel-slide">
                                 <div class="carousel-number">1/1</div>
                                 <img src="./images/tevdren-refs-fullres/dren-underwear.jpg" alt=""/>
                                 <div class="carousel-caption">Undergarments and loose hair (shown pre-Red Mountain)</div>
                             </div>`,
-                "drenmsq": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                "drenmsq": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/6</div>
@@ -227,8 +227,8 @@
                                 <div class="carousel-caption">Traveling cloak</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "drencasual1": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "drencasual1": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</a>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/4</div>
@@ -251,8 +251,8 @@
                                 <div class="carousel-caption">Belt, bootwraps, choker, bracelet, and rings</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "drencasual2": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <a class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "drencasual2": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/3</div>
@@ -270,8 +270,8 @@
                                 <div class="carousel-caption">Boots, choker, bracelet, and rings</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "drentribunal": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "drentribunal": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</button>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/5</div>
@@ -299,8 +299,8 @@
                                 <div class="carousel-caption">Belt, sash, supplies, bootwraps, choker, bracelet, and rings</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
-                "drensolstheim": `<a class="carousel-prev" onclick="plusSlides(-1)"><</a>
+                            <button class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
+                "drensolstheim": `<button class="carousel-prev" onclick="plusSlides(-1)" id="carousel-prev" tabindex="1"><</a>
                             
                             <div class="carousel-slide">
                                 <div class="carousel-number">1/6</div>
@@ -333,7 +333,7 @@
                                 <div class="carousel-caption">Coat</div>
                             </div>
                 
-                            <a class="carousel-next" onclick="plusSlides(1)">></a>`,
+                            <a class="carousel-next" onclick="plusSlides(1)" id="carousel-next" tabindex="1">></button>`,
             }
             let slideIndex = 1;
             var showOrHide = [
@@ -380,64 +380,64 @@
                     <h4 class="page-subheader">references</h4>
                     <section class="tevdren-ref-container">
                         <div class="tevdren-ref-column">
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevscars')">
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevscars')">
                                 <img src="./images/tevdren-refs-thumbs/tev-base.jpg" alt="a side by side image of an elf in underwear, no hair, with scars on display"/>
                                 <p>full scar references</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevunderwear')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevunderwear')">
                                 <img src="./images/tevdren-refs-thumbs/tev-underwear.jpg" alt="a side by side image "/>
                                 <p>underwear</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevmsq')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevmsq')">
                                 <img src="./images/tevdren-refs-thumbs/tev-msq.jpg" alt=""/>
                                 <p>morrowind main quest</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevcasual1')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevcasual1')">
                                 <img src="./images/tevdren-refs-thumbs/tev-relaxed.jpg" alt=""/>
                                 <p>casual outfit I</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevcasual2')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevcasual2')">
                                 <img src="./images/tevdren-refs-thumbs/tev-cool.jpg" alt=""/>
                                 <p>casual outfit II</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevtribunal')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('tevtribunal')">
                                 <img src="./images/tevdren-refs-thumbs/tev-tribunal.jpg" alt=""/>
                                 <p>tribunal</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevsolstheim')">
+                            </button>
+                            <button tabindex="0" class="tevdren-ref-block" onclick="spawnModal('tevsolstheim')">
                                 <img src="./images/tevdren-refs-thumbs/tev-solstheim.jpg" alt=""/>
                                 <p>solstheim</p>
-                            </div>
+                            </button>
                         </div>
                         <div class="tevdren-ref-column">
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenscars')">
+                            <button class="tevdren-ref-block" onclick="spawnModal('drenscars')">
                                 <img src="./images/tevdren-refs-thumbs/dren-base.jpg" alt=""/>
                                 <p>full scar references</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenunderwear')">
+                            </button>
+                            <button tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenunderwear')">
                                 <img src="./images/tevdren-refs-thumbs/dren-underwear.jpg" alt=""/>
                                 <p>underwear</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drenmsq')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('drenmsq')">
                                 <img src="./images/tevdren-refs-thumbs/dren-msq.jpg" alt=""/>
                                 <p>morrowind main quest</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drencasual1')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('drencasual1')">
                                 <img src="./images/tevdren-refs-thumbs/dren-relaxed.jpg" alt=""/>
                                 <p>casual outfit I</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drencasual2')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('drencasual2')">
                                 <img src="./images/tevdren-refs-thumbs/dren-cool.jpg" alt=""/>
                                 <p>casual outfit II</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drentribunal')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('drentribunal')">
                                 <img src="./images/tevdren-refs-thumbs/dren-tribunal.jpg" alt=""/>
                                 <p>tribunal</p>
-                            </div>
-                            <div role="button" tabindex="0" class="tevdren-ref-block" onclick="spawnModal('drensolstheim')">
+                            </button>
+                            <button class="tevdren-ref-block" onclick="spawnModal('drensolstheim')">
                                 <img src="./images/tevdren-refs-thumbs/dren-solstheim.jpg" alt=""/>
                                 <p>solstheim</p>
-                            </div>
+                            </button>
                         </div>
                     </section>
                 </main>
@@ -459,25 +459,52 @@
 
         <div style="display: none;" class="ref-modal" id="ref-modal" onclick="closeModal()">
             <div class="ref-modal-inner">
-                <div id="carousel-container" class="carousel-container">
+                <div id="carousel-container" class="carousel-container" tabindex="1">
                     <!-- carousel gets inserted here -->
                 </div>
 
                 <script>
-                    function spawnModal(name) {
+                    function trapFocus(element) { /* prevents tab from working on anything EXCEPT the modal while it's open */
+                        var focusableEls = [
+                            document.getElementById("carousel-prev"),
+                            document.getElementById("carousel-next")
+                        ];
+                        var firstFocusableEl = focusableEls[0];
+                        var lastFocusableEl = focusableEls[focusableEls.length - 1];
+                        var KEYCODE_TAB = 9;
+                        element.addEventListener('keydown', function(e) {
+                            var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+                            if (!isTabPressed) { 
+                            return; 
+                            } else {e.preventDefault();}
+
+                            if ( e.shiftKey ) /* shift + tab */ {
+                            if (document.activeElement === firstFocusableEl) {
+                                lastFocusableEl.focus();
+                                e.preventDefault();
+                                }
+                            } else /* tab */ {
+                            if (document.activeElement === lastFocusableEl) {
+                                firstFocusableEl.focus();
+                                e.preventDefault();
+                                }
+                            }
+                        });
+                    }
+                    function spawnModal(name) { /* spawns modal */
                         var carousel = document.getElementById("carousel-container");
                         carousel.innerHTML = carousels[name];
                         var modal = document.getElementById("ref-modal");
                         modal.style.display = "block";
+                        carousel.focus();
+                        window.addEventListener("keydown", keyboardModal);
+                        trapFocus(carousel);
                     }
-                    
                     showSlides(slideIndex);
-
-                    function plusSlides(n) {
+                    function plusSlides(n) { /* allows carousel to move forward and backward through images */
                         showSlides(slideIndex += n);
                     }
-
-                    function showSlides(n) {
+                    function showSlides(n) { /* determines how many slides are in carousel */
                         let i;
                         let slides = document.getElementsByClassName("carousel-slide");
                         if (n > slides.length) {slideIndex = 1} 
@@ -489,19 +516,29 @@
                         slides[slideIndex-1].style.display = "block";
                         }
                     }  
-                    
                     function preventClickThrough(e) {
                         e.stopImmediatePropagation();
                     }
+                    function keyboardModal(e) { /* prevents clickthrough but allows keyboard controls for closing/controlling modal */
+                        console.log(e.code);
+                        if (["Backspace", "Escape", "Delete"].includes(e.code)) {
+                            closeModal();
+                        } else if (["ArrowRight"].includes(e.code)) {
+                            plusSlides(1);
+                        } else if (e.code === "ArrowLeft") {
+                            plusSlides(-1);
+                        } else if (e.code === "Shift" + "Tab") {
+                            plusSlides(-1);
+                        }
+                    }
                     var image = document.getElementById("carousel-container");
                     image.addEventListener("click", preventClickThrough);
-
-                    function closeModal() {
+                    function closeModal() { /* closes modal */
                         var modal = document.getElementById("ref-modal");
                         modal.style.display = "none";
                     }
                 </script>
-                <div role="button" tabindex="0" onclick="closeModal()" class="close-illustration-modal">&lt; back</div>
+                <div role="button" tabindex="0" onclick="closeModal()" class="close-illustration-modal" tabindex="1">&lt; back</div>
             </div>
         </div>
 
