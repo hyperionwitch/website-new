@@ -426,6 +426,8 @@ button {
 }
 .tevdren-ref-column {
     padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
 }
 .tevdren-ref-block { /* NEED TO FIX THIS */
     text-align: center;
