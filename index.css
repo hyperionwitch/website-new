@@ -439,7 +439,7 @@ button {
     display: flex;
     flex-direction: column;
 }
-.tevdren-ref-block { /* NEED TO FIX THIS */
+.tevdren-ref-block {
     text-align: center;
     font-family: var(--subheader-font);
     color: var(--text-color2);
