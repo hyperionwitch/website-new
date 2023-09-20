@@ -8,12 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="hyperionwitch, artist, illustration, comic, comics, sequentialart">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./index.css">
         <script> 
             var messages = [ // variables for subheader text
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">human, <em>allegedly</em></a>`,
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">you will be safe on this site, that is a threat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">dagoth ur welcomes you, my sweet persistent friend</a>`
             ];
             var showOrHide = [
                 "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
@@ -33,7 +36,7 @@
             
             <nav class="nav-container" aria-label="primary">
                 <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-links" style="z-index: 0">
                     <ul>
                         <li class="highlight">home</li>
                         <li><a href="./illustrations.html">illustrations</a></li>
@@ -46,7 +49,7 @@
 
 
             <div class="body-container">
-                <header>
+                <banner class="body-header">
                     <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
                     <h2 id="subheader" class="subheader">
                         <script> //randomizes subheader text
@@ -55,7 +58,8 @@
                             el.innerHTML = messages[choice];
                         </script>
                     </h2>
-                </header>
+                    <i class="fa fa-bars nav-button" id="nav-button" style="color: var(--bg-color2)" onClick="mobileNav()"></i>
+                </banner>
 
                 <main class="body-content">
                     <h3 class="page-header">Updates</h3>
@@ -95,6 +99,29 @@
         
         
         </div>
+
+
+        <script>
+            function mobileNav() {
+                var menu = document.getElementById("nav-links");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+                if (menu.style.zIndex === "0") {
+                    menu.style.zIndex = "2";
+                } else {
+                    menu.style.zIndex = "0";
+                }
+                var button = document.getElementById("nav-button");
+                if (button.style.color === "var(--bg-color2)") {
+                    button.style.color = "var(--text-color2)"; 
+                } else {
+                    button.style.color = "var(--bg-color2)";
+                }
+            }
+        </script>
 
 
     </body>

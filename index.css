@@ -7,6 +7,8 @@
     --bg-color2: #343441;
     --bg-color3: #34344122;
     --bg-color4: #000000e8;
+    --bg-color5: #111115;
+    --bg-color6: #343441e8;
     --body-font: 'Kodchasan', sans-serif;
     --header-font: 'Amatic SC', sans-serif;
     --subheader-font: 'Economica', sans-serif;
@@ -36,9 +38,6 @@ button {
     background-color: #00000000;
     cursor: pointer;
 }
-
-
-
 .link {
     color: var(--link-color);
     text-decoration: none;
@@ -48,9 +47,44 @@ button {
     color: var(--highlight-color);
     transition: 0.3s;
 }
-
+@media only screen and (max-width: 750px) {
+    .link {
+        transition: 0.1s;
+    }
+    .link:hover {
+        color: var(--link-color);
+    }
+    .link:active {
+        color: var(--highlight-color);
+        transition: 0.1s;
+    }
+}
 .highlight {
     color: var(--highlight-color)
+}
+.back-button {
+    display: block;
+    float: right;
+    padding-right: 20px;
+    font-size: 30px;
+}
+.back-button a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: 0.3s;
+}
+.back-button a:hover {
+    color: var(--highlight-color);
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.loading {
+    text-align: center;
+    font-family: var(--subheader-font);
+    color: var(--text-color2);
+    font-size: 20pt;
+    position: relative;
+    top: 25vh;
 }
 
 
@@ -89,7 +123,11 @@ button {
     float: right;
     transform: rotate(180deg);
 }
-
+@media only screen and (max-width: 750px) {
+    .deco-container {
+        display: none;
+    }
+}
 
 
 .header-link {
@@ -151,6 +189,53 @@ button {
     top: 0px;
     position: fixed;
 }
+@media only screen and (max-width: 750px) {
+    .nav-container {
+        float: none;
+        width: 100%;
+        height: 400px;
+        max-height: 400px;
+        min-height: 400px;
+    }
+    .nav-container img {
+        height: 180px;
+        width: 180px;
+        left: -40px;
+        top: -40px;
+    }   
+    .nav-links {
+        justify-content: right;
+        background-color: var(--bg-color6);
+        top: 100px;
+        right: 0;
+        padding: 0 20px 0 0;
+        width: 150px;
+        max-height: max-content;
+        display: none;
+        z-index: 0;
+    }
+    .nav-container ul {
+        text-align: right;
+    }
+    .nav-container li {
+        margin: 30px 0;
+    }
+    .nav-container a:hover {
+        letter-spacing: normal;
+        color: var(--text-color2);
+    }
+    .nav-container a:active {
+        color: var(--highlight-color);
+    }
+    .nav-bg {
+        background-color: var(--bg-color5);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);
+        mask-image: linear-gradient(to right, transparent 0%, black 50%);
+        width: 100%;
+        left: 0;
+        height: 100px;
+    }
+}
 
 
 
@@ -169,6 +254,42 @@ button {
     margin: 0 0 0 330px;
     font-weight: lighter;
     padding: 0;
+}
+.nav-button {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    font-size: 35pt;
+    cursor: pointer;
+    transition: 0.1s;
+}
+@media only screen and (max-width: 750px) {
+    .body-header{
+        width: calc(100vw - 130px);
+        height: 100px;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 130px;
+        flex-direction: column;
+    }
+    .header {
+        font-size: 30pt;
+        float: left;
+        margin: 0;
+    }
+    .subheader {
+        font-size: 17pt;
+        float: left;
+        margin: 0;
+        width: 50vw;
+        line-height: 20px;
+        opacity: 0.5;
+    }
+    .nav-button {
+        display: block;
+    }
 }
 
 
@@ -195,6 +316,14 @@ button {
     background-color: var(--bg-color2);
     border-radius: 2px;
 }
+@media only screen and (max-width: 750px) {
+    .body-content {
+        max-width: 100%;
+        height: calc(100vh - 100px);
+        margin: 100px 0 0 0;
+        z-index: 1;
+    }
+}
 
 
 
@@ -219,35 +348,12 @@ button {
     align-self: center;
     margin: 20px 40px 0px;
 }
-
-
-
-.back-button {
-    display: block;
-    float: right;
-    padding-right: 20px;
-    font-size: 30px;
-}
-.back-button a {
-    text-decoration: none;
-    color: var(--link-color);
-    transition: 0.3s;
-}
-.back-button a:hover {
-    color: var(--highlight-color);
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-
-
-.loading {
-    text-align: center;
-    font-family: var(--subheader-font);
-    color: var(--text-color2);
-    font-size: 20pt;
-    position: relative;
-    top: 25vh;
+@media screen and (max-width: 750px) {
+    .page-text {
+        margin: 20px 40px 0px;
+        text-align: justify;
+        z-index: 1;
+    }
 }
 
 
@@ -277,22 +383,23 @@ button {
 
 
 .illustration-masonry {
-    columns: 5 150px;
+    columns: 6 190px;
     column-gap: 1rem;
     margin: 10px 30px 100px 20px;
     transition: opacity 0.3s;
   }
-.illustration-masonry div {
-    width: 150px;
+.illustration-masonry button {
+    min-width: 200px;
     background: #00000000;
     color: white;
-    margin: 0 20px 0 0;
+    margin: 0;
     display: inline-block;
     width: 100%;
-    text-align: center;
     cursor: pointer;
 }
-
+.illustration-masonry img {
+    max-width: 200px;
+}
 .illustration-modal {
     height: 100%;
     width: 100%;
@@ -319,15 +426,37 @@ button {
     right: 30px;
     font-family: var(--subheader-font);
     font-size: 35px;
-    text-shadow: 0px 0px 10px var(--bg-color);
-    color: var(--link-color);
+    text-shadow: 0px 0px 10px var(--bg-color), 0px 0px 20px var(--bg-color), 0px 0px 5px var(--bg-color);
+    color: var(--text-color);
     transition: 0.3s;
     cursor: pointer;
 }
 .close-modal:hover {
-    color: var(--highlight-color);
+    color: var(--link-color);
     letter-spacing: 3px;
     transition: 0.3s;
+}
+@media only screen and (max-width: 750px) {
+    .illustration-masonry {
+        z-index: 1;
+        columns: 3 140px;
+        column-fill: balance;
+        margin: 10px 20px 20px 20px;
+    }
+    .illustration-masonry button {
+        min-width: 100px;
+    }
+    .illustration-masonry img {
+        max-width: 150px;
+    }
+    .close-modal:hover {
+        letter-spacing: normal;
+        color: var(--text-color);
+    }
+    .close-modal:active {
+        color: var(--link-color);
+        transition: 0.1s;
+    }
 }
 
 
@@ -393,6 +522,16 @@ button {
     50% {box-shadow: 0px 0px 10px 5px var(--highlight-color);}
     100% {box-shadow: 0px 0px 1px 1px var(--highlight-color);}
 }
+@media only screen and (max-width: 750px) {
+    .tevdren-links {
+        text-align: center;
+        z-index: 1;
+    }
+    .tevdren-comics {
+        margin: auto;
+        z-index: 1;
+    }
+}
 
 .comic-modal {
     height: 100%;
@@ -425,6 +564,11 @@ button {
 .comic-modal-image {
     height: max-content;
     max-width: 100%;
+}
+@media only screen and (max-width: 750px) {
+    .comic-modal-image {
+        padding: 100px 0;
+    }
 }
 
 

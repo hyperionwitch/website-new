@@ -8,12 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="hyperionwitch, artist, illustration, elderscrolls, morrowind, dragonage, finalfantasy">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./index.css">
         <script> 
             var messages = [ // variables for subheader text
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">human, <em>allegedly</em></a>`,
                 `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
-                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">you will be safe on this site, that is a threat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">dagoth ur welcomes you, my sweet persistent friend</a>`
             ];
             var showOrHide = [
                 "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
@@ -33,7 +36,7 @@
             
             <nav class="nav-container" aria-label="primary">
                 <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-links" style="z-index: 0">
                     <ul>
                         <li><a href="./index.html">home</a></li>
                         <li class="highlight">illustrations</li>
@@ -46,7 +49,7 @@
 
 
             <div class="body-container">
-                <header>
+                <banner class="body-header">
                     <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
                     <h2 id="subheader" class="subheader">
                         <script> //randomizes subheader text
@@ -55,62 +58,63 @@
                             el.innerHTML = messages[choice];
                         </script>
                     </h2>
-                </header>
+                    <i class="fa fa-bars nav-button" id="nav-button" style="color: var(--bg-color2)" onClick="mobileNav()"></i>
+                </banner>
 
                 <main class="body-content">
                     <h3 class="page-header">Illustrations</h3>
                     <div id="illustration-loading" class="loading" style="display: block;">loading...</div>
                     <section id="illustration-masonry" class="illustration-masonry" style="opacity: 0;">
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-holidays2022.jpg')"><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-inspiration.jpg')"><img src="./images/illo-thumbs/tevdren-inspiration.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-yearning.jpg')"><img src="./images/illo-thumbs/tevdren-yearning.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/nierauto-renaissance.jpg')"><img src="./images/illo-thumbs/nierauto-renaissance.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/p4-truth.jpg')"><img src="./images/illo-thumbs/p4-truth.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ds-fourlords.jpg')"><img src="./images/illo-thumbs/ds-fourlords.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/sh2-reversible.jpg')"><img src="./images/illo-thumbs/sh2-reversible.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-frostfall.jpg')"><img src="./images/illo-thumbs/tevdren-frostfall.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-sunsheight.jpg')"><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-almostlostyou.jpg')"><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/witcher-tossacoin.jpg')"><img src="./images/illo-thumbs/witcher-tossacoin.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-hearthfire.jpg')"><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ff14-uldahnmarket.jpg')"><img src="./images/illo-thumbs/ff14-uldahnmarket.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-lastseed.jpg')"><img src="./images/illo-thumbs/tevdren-lastseed.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-firstseed.jpg')"><img src="./images/illo-thumbs/tevdren-firstseed.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-musiclessons.jpg')"><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-sunsdawn.jpg')"><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-lavellanskyfall.jpg')"><img src="./images/illo-thumbs/dai-lavellanskyfall.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-morningstar.jpg')"><img src="./images/illo-thumbs/tevdren-morningstar.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-eveningstar.jpg')"><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-gares.jpg')"><img src="./images/illo-thumbs/tevdren-gares.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-drenpinup.jpg')"><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-tevpinup.jpg')"><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/pf-fashionablemops.jpg')"><img src="./images/illo-thumbs/pf-fashionablemops.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/pf-storminabottle.jpg')"><img src="./images/illo-thumbs/pf-storminabottle.jpg" width="200px" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-holidays2022.jpg')"><img src="./images/illo-thumbs/tevdren-holidays2022.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-inspiration.jpg')"><img src="./images/illo-thumbs/tevdren-inspiration.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-yearning.jpg')"><img src="./images/illo-thumbs/tevdren-yearning.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/nierauto-renaissance.jpg')"><img src="./images/illo-thumbs/nierauto-renaissance.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/p4-truth.jpg')"><img src="./images/illo-thumbs/p4-truth.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ds-fourlords.jpg')"><img src="./images/illo-thumbs/ds-fourlords.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/sh2-reversible.jpg')"><img src="./images/illo-thumbs/sh2-reversible.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-frostfall.jpg')"><img src="./images/illo-thumbs/tevdren-frostfall.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-sunsheight.jpg')"><img src="./images/illo-thumbs/tevdren-sunsheight.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-almostlostyou.jpg')"><img src="./images/illo-thumbs/tevdren-almostlostyou.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/witcher-tossacoin.jpg')"><img src="./images/illo-thumbs/witcher-tossacoin.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-hearthfire.jpg')"><img src="./images/illo-thumbs/tevdren-hearthfire.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ff14-uldahnmarket.jpg')"><img src="./images/illo-thumbs/ff14-uldahnmarket.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-lastseed.jpg')"><img src="./images/illo-thumbs/tevdren-lastseed.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-firstseed.jpg')"><img src="./images/illo-thumbs/tevdren-firstseed.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-musiclessons.jpg')"><img src="./images/illo-thumbs/tevdren-musiclessons.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-sunsdawn.jpg')"><img src="./images/illo-thumbs/tevdren-sunsdawn.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-lavellanskyfall.jpg')"><img src="./images/illo-thumbs/dai-lavellanskyfall.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-morningstar.jpg')"><img src="./images/illo-thumbs/tevdren-morningstar.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-eveningstar.jpg')"><img src="./images/illo-thumbs/tevdren-eveningstar.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-gares.jpg')"><img src="./images/illo-thumbs/tevdren-gares.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-drenpinup.jpg')"><img src="./images/illo-thumbs/tevdren-drenpinup.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-tevpinup.jpg')"><img src="./images/illo-thumbs/tevdren-tevpinup.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/pf-fashionablemops.jpg')"><img src="./images/illo-thumbs/pf-fashionablemops.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/pf-storminabottle.jpg')"><img src="./images/illo-thumbs/pf-storminabottle.jpg" alt=""/></button>
                         <button onclick="spawnModal('./images/illo-fullres/xs-kosmos.jpg')" width="200px"><img src="./images/illo-thumbs/xs-kosmos.jpg" alt=""/></button>
                         <button onclick="spawnModal('./images/illo-fullres/tevdren-rainy.jpg')" width="200px"><img src="./images/illo-thumbs/tevdren-rainy.jpg" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-momentofcalm.jpg')"><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-commission.jpg')"><img src="./images/illo-thumbs/dai-commission.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-solavellan.jpg')"><img src="./images/illo-thumbs/dai-solavellan.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-kintsukuroi.jpg')"><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/tevdren-weaveoffate.jpg')"><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ut-genocide.jpg')"><img src="./images/illo-thumbs/ut-genocide.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ut-pacifist.jpg')"><img src="./images/illo-thumbs/ut-pacifist.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ff7-cloudseph.jpg')"><img src="./images/illo-thumbs/ff7-cloudseph.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/es5-nelanis.jpg')"><img src="./images/illo-thumbs/es5-nelanis.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/su-sailorquartz.jpg')"><img src="./images/illo-thumbs/su-sailorquartz.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/lok-korrasami.jpg')"><img src="./images/illo-thumbs/lok-korrasami.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-firelight.jpg')"><img src="./images/illo-thumbs/dai-firelight.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-watchitburn.jpg')"><img src="./images/illo-thumbs/dai-watchitburn.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-nehristarot.jpg')"><img src="./images/illo-thumbs/dai-nehristarot.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/dai-nehris.jpg')"><img src="./images/illo-thumbs/dai-nehris.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/pf-darktapestry.jpg')"><img src="./images/illo-thumbs/pf-darktapestry.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/mh-whatyouhavecaused.jpg')"><img src="./images/illo-thumbs/mh-whatyouhavecaused.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/mh-afraidtosee.jpg')"><img src="./images/illo-thumbs/mh-afraidtosee.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/mh-everythingisfine.gif')"><img src="./images/illo-thumbs/mh-everythingisfine.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ff7-turks.jpg')"><img src="./images/illo-thumbs/ff7-turks.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/ff10-yunaaeons.jpg')"><img src="./images/illo-thumbs/ff10-yunaaeons.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/lol-vicait.jpg')"><img src="./images/illo-thumbs/lol-vicait.jpg" width="200px" alt=""/></button>
-                        <button onclick="spawnModal('./images/illo-fullres/loz-ootmm.jpg')"><img src="./images/illo-thumbs/loz-ootmm.jpg" width="200px" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-momentofcalm.jpg')"><img src="./images/illo-thumbs/tevdren-momentofcalm.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-commission.jpg')"><img src="./images/illo-thumbs/dai-commission.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-solavellan.jpg')"><img src="./images/illo-thumbs/dai-solavellan.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-kintsukuroi.jpg')"><img src="./images/illo-thumbs/tevdren-kintsukuroi.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/tevdren-weaveoffate.jpg')"><img src="./images/illo-thumbs/tevdren-weaveoffate.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ut-genocide.jpg')"><img src="./images/illo-thumbs/ut-genocide.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ut-pacifist.jpg')"><img src="./images/illo-thumbs/ut-pacifist.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ff7-cloudseph.jpg')"><img src="./images/illo-thumbs/ff7-cloudseph.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/es5-nelanis.jpg')"><img src="./images/illo-thumbs/es5-nelanis.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/su-sailorquartz.jpg')"><img src="./images/illo-thumbs/su-sailorquartz.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/lok-korrasami.jpg')"><img src="./images/illo-thumbs/lok-korrasami.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-firelight.jpg')"><img src="./images/illo-thumbs/dai-firelight.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-watchitburn.jpg')"><img src="./images/illo-thumbs/dai-watchitburn.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-nehristarot.jpg')"><img src="./images/illo-thumbs/dai-nehristarot.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/dai-nehris.jpg')"><img src="./images/illo-thumbs/dai-nehris.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/pf-darktapestry.jpg')"><img src="./images/illo-thumbs/pf-darktapestry.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/mh-whatyouhavecaused.jpg')"><img src="./images/illo-thumbs/mh-whatyouhavecaused.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/mh-afraidtosee.jpg')"><img src="./images/illo-thumbs/mh-afraidtosee.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/mh-everythingisfine.gif')"><img src="./images/illo-thumbs/mh-everythingisfine.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ff7-turks.jpg')"><img src="./images/illo-thumbs/ff7-turks.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/ff10-yunaaeons.jpg')"><img src="./images/illo-thumbs/ff10-yunaaeons.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/lol-vicait.jpg')"><img src="./images/illo-thumbs/lol-vicait.jpg" alt=""/></button>
+                        <button onclick="spawnModal('./images/illo-fullres/loz-ootmm.jpg')"><img src="./images/illo-thumbs/loz-ootmm.jpg" alt=""/></button>
                     </section>
 
                     <script>
@@ -187,6 +191,26 @@
                 var modal = document.getElementById("illustration-modal");
                 modal.style.display = "none";
                 window.removeEventListener("keydown", keyboardExitModal);
+            }
+            function mobileNav() {
+                var menu = document.getElementById("nav-links");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+                if (menu.style.zIndex === "0") {
+                    menu.style.zIndex = "2";
+                } else {
+                    menu.style.zIndex = "0";
+                }
+                var button = document.getElementById("nav-button");
+                if (button.style.color === "var(--bg-color2)") {
+                    button.style.color = "var(--text-color2)"; 
+                } else {
+                    button.style.color = "var(--bg-color2)";
+                }
+                console.log(menu.style.zIndex)
             }
         </script>
 
