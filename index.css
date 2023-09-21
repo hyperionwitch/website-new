@@ -58,6 +58,9 @@ button {
         color: var(--highlight-color);
         transition: 0.1s;
     }
+    h1, h2, h3, h4, h5, h6 {
+        z-index: 2;
+    }
 }
 .highlight {
     color: var(--highlight-color)
@@ -155,7 +158,7 @@ button {
     max-height: 30vh;
     position: fixed;
     z-index: 2;
-    top: calc(200px + 10vh)
+    top: 320px;
 }
 .nav-container ul {
     list-style-type: none;
@@ -169,12 +172,12 @@ button {
 .nav-container li {
     margin: calc(100vh / 30) 0px;
 }
-.nav-container a {
+.nav-container li a {
     text-decoration: none;
     color: var(--text-color2);
     transition: 0.3s;
 }
-.nav-container a:hover {
+.nav-container li a:hover {
     color: var(--link-color);
     letter-spacing: 2px;
     transition: 0.3s;
@@ -220,11 +223,11 @@ button {
     .nav-container li {
         margin: 30px 0;
     }
-    .nav-container a:hover {
+    .nav-container li a:hover {
         letter-spacing: normal;
         color: var(--text-color2);
     }
-    .nav-container a:active {
+    .nav-container li a:active {
         color: var(--highlight-color);
     }
     .nav-bg {
@@ -493,7 +496,7 @@ button {
     margin: 10px;
     display: block;
 }
-.tevdren-comiclink h5, span {
+.tevdren-comiclink h5, .tevdren-comiclink span {
     font-family: var(--subheader-font);
     font-size: 20pt;
     color: var(--text-color2);
@@ -594,6 +597,17 @@ button {
 .tevdren-ref-block p {
     margin: 0;
 }
+@media only screen and (max-width: 750px) {
+    .tevdren-ref-container {
+        z-index: 1;
+    }
+    .tevdren-ref-column {
+        padding: 0;
+    }
+    .tevdren-ref-column img {
+        width: 45vw;
+    }
+}
 .ref-modal {
     height: 100%;
     width: 100%;
@@ -649,6 +663,11 @@ button {
     color: var(--highlight-color);
     transform: scaleX(200%) scaleY(150%) translateX(10px);
 }
+@media only screen and (max-width: 750px) {
+    .carousel-caption {
+        font-size: 9pt;
+    }
+}
 
 
 
@@ -675,6 +694,22 @@ button {
     display: block;
     padding-top: 5px;
 }
+@media only screen and (max-width: 750px) {
+    .about-links {
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    .about-link-block {
+        margin: 10px 0;
+    }
+    .about-link-block .fa {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
 
 .secret {
     position: fixed;
@@ -696,4 +731,9 @@ button {
     position: absolute;
     bottom: 50px;
     right: 50px;
+}
+@media only screen and (max-width: 750px) {
+    .secret {
+        z-index: -2;
+    }
 }
