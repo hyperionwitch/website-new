@@ -39,7 +39,7 @@
             
             <nav class="nav-container" aria-label="primary">
                 <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
-                <div class="nav-links" id="nav-links" style="z-index: 0">
+                <div class="nav-links" id="nav-links" style="z-index: 1">
                     <ul>
                         <li class="highlight">home</li>
                         <li><a href="./illustrations.html">illustrations</a></li>
@@ -113,10 +113,10 @@
                 } else {
                     menu.style.display = "block";
                 }
-                if (menu.style.zIndex === "0") {
+                if (menu.style.zIndex === "1") {
                     menu.style.zIndex = "3";
                 } else {
-                    menu.style.zIndex = "0";
+                    menu.style.zIndex = "1";
                 }
                 var button = document.getElementById("nav-button");
                 if (button.style.color === "var(--bg-color2)") {
