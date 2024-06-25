@@ -30,6 +30,7 @@ body {
     cursor: default;
     bottom: 0;
     position: static;
+    overscroll-behavior-y: auto;
 }
 button {
     padding: 0;
@@ -89,6 +90,18 @@ button {
     position: relative;
     top: 25vh;
 }
+/* .pull-to-refresh {position: fixed;
+    top: -50px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.7s ease-in-out;
+  }
+  .pull-to-refresh.visible {
+    top: 0;
+  } */
 
 
 
