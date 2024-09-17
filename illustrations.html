@@ -195,6 +195,9 @@
                 trapFocus(modal);
             }
             function closeModal() {
+                var image = document.getElementById("illustration-modal-image");
+                image.src = "none";
+                image.alt = "none";
                 var modal = document.getElementById("illustration-modal");
                 modal.style.display = "none";
                 window.removeEventListener("keydown", keyboardExitModal);

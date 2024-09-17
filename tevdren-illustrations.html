@@ -166,6 +166,9 @@
                 trapFocus(modal);
             }
             function closeModal() {
+                var image = document.getElementById("tevdren-illo-modal-image");
+                image.src = "none";
+                image.alt = "none";
                 var modal = document.getElementById("tevdren-illo-modal");
                 modal.style.display = "none";
                 window.removeEventListener("keydown", keyboardExitModal);

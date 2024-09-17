@@ -303,6 +303,8 @@
                 trapFocus(modal);
             }
             function closeModal() { /* closes modal */
+                var image = document.getElementById("comic-modal-image");
+                image.src = "none";
                 var modal = document.getElementById("comic-modal");
                 modal.style.display = "none";
                 window.removeEventListener("keydown", keyboardExitModal);
