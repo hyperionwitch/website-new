@@ -551,8 +551,9 @@
                     function closeModal() { /* closes modal */
                         let slides = document.getElementsByClassName("carousel-slide");
                         slides[0].style.display = "block";
-                        plusSlides(-(slides.length) + 1) /* resets modal to first slide */
-                        console.log("test")
+                        slideIndex = 1;
+                        showSlides(slideIndex);
+                        console.log(slides.length)
                         var modal = document.getElementById("ref-modal");
                         modal.style.display = "none";
                     }
