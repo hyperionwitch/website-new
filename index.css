@@ -682,6 +682,43 @@ button {
 
 
 
+.cosplays {
+    display: flex;
+    width: calc(100% - 20px);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.cosplay-tiles {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: large;
+}
+.cosplay-tiles > img {
+    height: 350px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.cosplay-link {
+    font-family: var(--subheader-font);
+    font-size: 20pt;
+    color: var(--text-color2);
+    width: 150px;
+    margin: auto;
+    font-weight: lighter;
+    min-height: 62px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 750px) {
+    .cosplays {
+        align-self: center;
+        z-index: 1;
+    }
+}
+
+
+
 .about-links {
     font-family: var(--subheader-font);
     font-size: 20pt;
