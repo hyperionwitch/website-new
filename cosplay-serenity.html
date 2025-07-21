@@ -2,11 +2,11 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <title>Hyperionwitch Art - Illustrations and Comics by Gillian Renk</title>
+        <title>Princess Serenity - Hyperionwitch Art</title>
         <meta name="description" content="Part portfolio, part personal blog, all harmless with a coat of sinister paint">
         <meta name="author" content="Gillian Renk">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="hyperionwitch, artist, illustration, comic, comics, sequentialart">
+        <meta name="keywords" content="hyperionwitch, cosplay, cosplayer, serenity, princessserenity, sailormoon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./index.css">
@@ -71,13 +71,51 @@
                     <section class="cosplay-details">
                         <h4>Series: Sailor Moon</h4>
                         <h4>Completion Date: 2024</h4>
-                        <p>lorem ipsum</p>
-                        <section>
-                            <img src="" alt="photo of cosplay etc." />
-                            <img src="" alt="photo of cosplay etc." />
-                            <img src="" alt="photo of cosplay etc." />
-                            <img src="" alt="photo of cosplay etc." />
-                            <img src="" alt="photo of cosplay etc." />
+                        <h4>Credits:</h4>
+                            <ul>
+                                <li>photos by <a href="https://portfolio.tasty-patches.com/">Tasty Patches</a></li>
+                            </ul>
+                        <section class="cosplay-photos">
+                            <h4>Photos:</h4>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity1.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity1.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity2.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity2.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity5.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity5.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity4.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity4.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity6.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity6.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity7.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity7.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity8.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity8.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity9.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity9.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity3.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity3.jpg" alt="" />
+                                </button>
+                        </section>
+                        <section class="cosplay-detailphotos">
+                            <h4>Details:</h4>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity-detail1.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity-detail1.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity-detail2.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity-detail2.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/serenity-detail3.jpg')" >
+                                    <img src="./images/cosplay-thumbs/serenity-detail3.jpg" alt="" />
+                                </button>
                         </section>
                     </section>
                 </main>
@@ -98,6 +136,51 @@
 
 
         <script>
+            function trapFocus(element) { /* prevents tab from working on anything EXCEPT the modal while it's open */
+                var focusableEls = [
+                    document.getElementById("cosplay-modal-inner"),
+                    document.getElementById("close-comic-modal")
+                ];
+                var firstFocusableEl = focusableEls[0];
+                var lastFocusableEl = focusableEls[focusableEls.length - 1];
+                var KEYCODE_TAB = 9;
+                element.addEventListener('keydown', function(e) {
+                    var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+                    if (!isTabPressed) { 
+                    return; 
+                    } else {e.preventDefault();}
+
+                    if ( e.shiftKey ) /* shift + tab */ {
+                    if (document.activeElement === firstFocusableEl) {
+                        lastFocusableEl.focus();
+                        e.preventDefault();
+                        }
+                    } else /* tab */ {
+                    if (document.activeElement === lastFocusableEl) {
+                        firstFocusableEl.focus();
+                        e.preventDefault();
+                        }
+                    }
+                });
+            }
+            function spawnModal(source) { /* spawns modal */
+                var image = document.getElementById("cosplay-modal-image");
+                image.src = source;
+                var modal = document.getElementById("cosplay-modal");
+                modal.style.display = "block";
+                var scroll = document.getElementById("cosplay-modal-inner");
+                scroll.scrollTop = 0;
+                scroll.focus();
+                window.addEventListener("keydown", keyboardExitModal);
+                trapFocus(modal);
+            }
+            function closeModal() { /* closes modal */
+                var image = document.getElementById("cosplay-modal-image");
+                image.src = "none";
+                var modal = document.getElementById("cosplay-modal");
+                modal.style.display = "none";
+                window.removeEventListener("keydown", keyboardExitModal);
+            }
             function mobileNav() {
                 var menu = document.getElementById("nav-links");
                 if (menu.style.display === "block") {
@@ -118,6 +201,26 @@
                 }
             }
         </script>
+
+        <div style="display: none;" id="cosplay-modal" class="cosplay-modal"  onclick="closeModal()">
+            <div id="cosplay-modal-inner" class="cosplay-modal-inner" tabindex="1">
+                <img src="" alt="" id="cosplay-modal-image" class="cosplay-modal-image">
+                <script> /* prevents clickthrough but allows keyboard controls for closing modal */
+                    function preventClickThrough(e) {
+                        e.stopImmediatePropagation();
+                    }
+                    function keyboardExitModal(e) {
+                        console.log(e.code);
+                        if (["Backspace", "Escape", "Delete"].includes(e.code)) {
+                            closeModal();
+                        }
+                    }
+                    var image = document.getElementById("cosplay-modal-image");
+                    image.addEventListener("click", preventClickThrough);
+                </script>
+                <div role="button" onclick="closeModal()" class="close-modal" tabindex="1">&lt; back</div>
+            </div>
+        </div>
 
 
     </body>

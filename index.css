@@ -710,10 +710,67 @@ button {
     min-height: 62px;
     text-decoration: none;
 }
+.cosplay-link h4 {
+    margin: 5px 0;
+}
+.cosplay-details {
+    font-size: 12pt;
+    text-align: left;
+    align-self: center;
+    margin: 10px 20px 0px;
+}
+.cosplay-details a {
+    font-family: var(--body-font);
+    color: var(--link-color);
+    text-decoration: none;
+}
+.cosplay-details {
+    margin-bottom: 100px;
+}
+.cosplay-photos-old {
+    text-align: center;
+    float: inline-start;
+    padding: 0 5px;
+    height: 637px;
+}
+.cosplay-photos-old h3 {
+    margin: 10px 0;
+}
+.cosplay-photos-old h4 {
+    margin: 10px 0;
+}
 @media only screen and (max-width: 750px) {
     .cosplays {
         align-self: center;
         z-index: 1;
+    }
+}
+
+.cosplay-modal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color4);
+    z-index: 3;
+}
+.cosplay-modal-inner {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--bg-color2);
+    scrollbar-width: thin;
+}
+.cosplay-modal-image {
+    height: 100%;
+}
+@media only screen and (max-width: 750px) {
+    .cosplay-modal-image {
+        padding: 100px 0;
     }
 }
 

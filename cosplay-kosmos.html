@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>KOS-MOS - Hyperionwitch Art</title>
+        <meta name="description" content="Part portfolio, part personal blog, all harmless with a coat of sinister paint">
+        <meta name="author" content="Gillian Renk">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="hyperionwitch, cosplay, cosplayer, kosmos, xenosaga">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Economica&family=Kodchasan">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./index.css">
+        <script> 
+            var messages = [ // variables for subheader text
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">human, <em>allegedly</em></a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the \"other\" white meat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">the rattling is getting closer</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">you will be safe on this site, that is a threat</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">friend or traitor, come and look upon the heart</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">skeleton enthusiast</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">friend to crows</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">you know, like, nya</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">shifting into soup mode</a>`,
+                `<a class="header-link" href="./index.html" style="color: var(--text-color2)">there's something strange in this <span style="color: var(--link-color)">house</span></a>`,
+            ];
+            var showOrHide = [
+                "block", "none", "none", "none", "none", "none", "none", "none", "none", "none"
+            ]
+        </script>
+    </head>
+
+    <body>
+
+
+        <div class="content-container">
+            <div class="deco-container">
+                <img src="/images/hw-web-deco.png" class="deco-1" alt=""/>
+                <img src="/images/hw-web-deco.png" class="deco-2" alt=""/>
+            </div>
+            
+            
+            <nav class="nav-container" aria-label="primary">
+                <a href="./index.html"><img src="./images/hw-web-logo.png" height="305px" width="305px" alt="Hyperionwitch Art home page" /></a>
+                <div class="nav-links" id="nav-links" style="z-index: 1">
+                    <ul>
+                        <li class="highlight">home</li>
+                        <li><a href="./illustrations.html">illustrations</a></li>
+                        <li><a href="./comics.html">comics</a></li>
+                        <li><a href="./about.html">about + links</a></li>
+                    </ul>
+                </div>
+                <div class="nav-bg"></div>
+            </nav>
+
+
+            <div class="body-container">
+                <banner class="body-header">
+                    <h1 class="header"><a class="header-link" href="./index.html">Hyperionwitch Art</a></h1>
+                    <h2 id="subheader" class="subheader">
+                        <script> //randomizes subheader text
+                            var el = document.getElementById("subheader");
+                            var choice = Math.floor(Math.random() * messages.length);
+                            el.innerHTML = messages[choice];
+                        </script>
+                    </h2>
+                    <i class="fa fa-bars nav-button" id="nav-button" style="color: var(--bg-color2)" onClick="mobileNav()"></i>
+                </banner>
+
+                <main class="body-content">
+                    <h3 class="page-header">KOS-MOS v1</h3>
+                    <section class="cosplay-details">
+                        <h4>Series: Xenosaga</h4>
+                        <h4>Completion Date: 2025</h4>
+                        <h4>Credits:</h4>
+                            <ul>
+                                <li>photos by <a href="https://portfolio.tasty-patches.com/">Tasty Patches</a></li>
+                            </ul>
+                        <section class="cosplay-photos">
+                            <h4>Photos:</h4>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos1.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos1.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos6.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos6.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos7.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos7.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos8.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos8.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos3.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos3.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos5.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos5.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos2.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos2.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos4.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos4.jpg" alt="" />
+                                </button>
+                        </section>
+                        <section class="cosplay-detailphotos">
+                            <h4>Details:</h4>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos-detail1.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos-detail1.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos-detail2.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos-detail2.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos-detail3.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos-detail3.jpg" alt="" />
+                                </button>
+                                <button class="cosplay-photo" onclick="spawnModal('./images/cosplay-fullres/kosmos-detail4.jpg')" >
+                                    <img src="./images/cosplay-thumbs/kosmos-detail4.jpg" alt="" />
+                                </button>
+                        </section>
+                    </section>
+                </main>
+            </div>
+
+
+            <div id="index-secret" class="secret" style="display: none;">
+                <a href="./whatsthis.html" target="_blank" alt="you found a secret">?</a>
+                <script>
+                    var secret = document.getElementById("index-secret");
+                    var n = Math.floor(Math.random() * showOrHide.length);
+                    secret.style.display = showOrHide[n];
+                </script>
+            </div>
+        
+        
+        </div>
+
+
+        <script>
+            function trapFocus(element) { /* prevents tab from working on anything EXCEPT the modal while it's open */
+                var focusableEls = [
+                    document.getElementById("cosplay-modal-inner"),
+                    document.getElementById("close-comic-modal")
+                ];
+                var firstFocusableEl = focusableEls[0];
+                var lastFocusableEl = focusableEls[focusableEls.length - 1];
+                var KEYCODE_TAB = 9;
+                element.addEventListener('keydown', function(e) {
+                    var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+                    if (!isTabPressed) { 
+                    return; 
+                    } else {e.preventDefault();}
+
+                    if ( e.shiftKey ) /* shift + tab */ {
+                    if (document.activeElement === firstFocusableEl) {
+                        lastFocusableEl.focus();
+                        e.preventDefault();
+                        }
+                    } else /* tab */ {
+                    if (document.activeElement === lastFocusableEl) {
+                        firstFocusableEl.focus();
+                        e.preventDefault();
+                        }
+                    }
+                });
+            }
+            function spawnModal(source) { /* spawns modal */
+                var image = document.getElementById("cosplay-modal-image");
+                image.src = source;
+                var modal = document.getElementById("cosplay-modal");
+                modal.style.display = "block";
+                var scroll = document.getElementById("cosplay-modal-inner");
+                scroll.scrollTop = 0;
+                scroll.focus();
+                window.addEventListener("keydown", keyboardExitModal);
+                trapFocus(modal);
+            }
+            function closeModal() { /* closes modal */
+                var image = document.getElementById("cosplay-modal-image");
+                image.src = "none";
+                var modal = document.getElementById("cosplay-modal");
+                modal.style.display = "none";
+                window.removeEventListener("keydown", keyboardExitModal);
+            }
+            function mobileNav() {
+                var menu = document.getElementById("nav-links");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+                if (menu.style.zIndex === "1") {
+                    menu.style.zIndex = "3";
+                } else {
+                    menu.style.zIndex = "1";
+                }
+                var button = document.getElementById("nav-button");
+                if (button.style.color === "var(--bg-color2)") {
+                    button.style.color = "var(--text-color2)"; 
+                } else {
+                    button.style.color = "var(--bg-color2)";
+                }
+            }
+        </script>
+
+        <div style="display: none;" id="cosplay-modal" class="cosplay-modal"  onclick="closeModal()">
+            <div id="cosplay-modal-inner" class="cosplay-modal-inner" tabindex="1">
+                <img src="" alt="" id="cosplay-modal-image" class="cosplay-modal-image">
+                <script> /* prevents clickthrough but allows keyboard controls for closing modal */
+                    function preventClickThrough(e) {
+                        e.stopImmediatePropagation();
+                    }
+                    function keyboardExitModal(e) {
+                        console.log(e.code);
+                        if (["Backspace", "Escape", "Delete"].includes(e.code)) {
+                            closeModal();
+                        }
+                    }
+                    var image = document.getElementById("cosplay-modal-image");
+                    image.addEventListener("click", preventClickThrough);
+                </script>
+                <div role="button" onclick="closeModal()" class="close-modal" tabindex="1">&lt; back</div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
